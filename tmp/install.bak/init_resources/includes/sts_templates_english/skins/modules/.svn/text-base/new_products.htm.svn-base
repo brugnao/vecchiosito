@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>New Products</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- new_products //-->
+<span tal:comment="La skin module_box_simple_header richiede la definizione della variabile 'title'"
+      tal:define="title box_heading"
+      metal:use-macro="modules_boxes.htm/module_box_simple_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="modules_boxes.htm/module_box_body">
+	  <span tal:omit-tag="" metal:fill-slot="box_contents">
+    	<table border="0" width="100%" cellspacing="0" cellpadding="2" class="infoBoxContents">
+    		<tr tal:repeat="row products_rows">
+    			<td  tal:repeat="product row" align="center" class="smallText" width="33%" valign="top">
+    				<span tal:condition="product/present">
+	   					<a tal:attributes="href product/products_url">
+	   						<span tal:omit-tag="" tal:content="structure product/products_image_html"/>
+	   					</a>
+	   					<br/>
+	   					<a tal:attributes="href product/products_url" tal:content="structure product/products_name">Stampa 10x15 da 701 in poi...</a>
+	   					<br/>
+	   					<span tal:omit-tag="" tal:content="structure product/products_price_formatted">0.14EUR</span>
+	   				   	<br/>
+	   					<!-- <a tal:attributes="href product/cart_link"><img src="includes/languages/italian/images/buttons/button_buy_now.gif" border="0"/></a> -->
+	   				   	<!-- <a tal:attributes="href product/products_url"><img src="includes/languages/italian/images/buttons/button_details.gif" border="0"/></a> -->
+    				</span> 
+    			</td>
+    		</tr>
+    	</table>
+	  </span>
+</span>
+<!-- new_products_eof //-->
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Products Selector</title>
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="relatedProducts">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="relatedProductsTable">
+<tr tal:condition="php:sizeof(products) GE 4">
+	<td colspan="4" align="right" tal:content="structure button_in_cart"></td>
+</tr>
+<tr nowrap="nowrap" tal:repeat="product products">
+	<tal:span tal:omit-tag="" tal:condition="php:(product['row'] EQ 1)">
+		<td class="productListing-heading"  tal:repeat="header headers" tal:content="structure header">&nbsp;</td>
+	</tal:span>
+	<tal:span tal:omit-tag="" tal:condition="php:(product['row'] NE 1)">
+		<td class="ml_productListing-data"><img tal:condition="php:strlen(product['products_image_thumb']) GT 0" tal:attributes="src product/products_image_thumb;alt product/products_name"/></td>
+		<td class="ml_productListing-data"><span tal:omit-tag="" tal:content="structure product/products_name">products_name</span></td>
+		<td class="ml_productListing-data"><span tal:omit-tag="" tal:content="structure product/products_price_display"></span></td>
+		<tal:span tal:omit-tag="" tal:condition="product/showSelection">
+			<td class="ml_productListing-data">
+				<div style="white-space:nowrap">
+					<input tal:attributes="id product/quantity_id;name product/quantity_id" type="text" size="3" class="relatedProductsQuantity" value="0"/>
+					<span tal:omit-tag="" tal:content="structure product/imgplus"/>
+					&nbsp;
+					<span tal:omit-tag="" tal:content="structure product/imgminus"/>
+					<input type="hidden" tal:attributes="id product/products_id_name;name product/products_id_name;value product/products_id"/>
+				</div>
+			</td>
+		</tal:span>
+		<tal:span tal:omit-tag="" tal:condition="not:product/showSelection">
+			<td class="ml_productListing-data">&nbsp;</td>
+		</tal:span>
+	</tal:span>
+</tr>
+<tr>
+	<td colspan="4" align="right" tal:content="structure button_in_cart"></td>
+</tr>
+</table></div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>How to use the Discount Coupon Codes Module</title>
+<style type="text/css">
+<!--
+.tableBorder {
+	border: 1px solid #333333;
+}
+body {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 10pt;
+}
+.code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	background-color: #FFFFCC;
+	border: 1px solid #333333;
+	overflow: auto;
+	margin: 5px;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+h3 {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 14pt;
+	font-weight: bolder;
+	font-variant: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+	border-left-width: 10px;
+	border-left-style: solid;
+	border-left-color: #333333;
+	padding-left: 10px;
+	margin-top: 50px;
+}
+h2 {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 16pt;
+	font-weight: bolder;
+	color: #99CCCC;
+	background-color: #333333;
+	text-align: center;
+	padding: 5px;
+}
+h4 {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 14pt;
+	font-weight: bolder;
+	font-style: italic;
+}
+li {
+	margin-bottom: 10px;
+}
+.notice {
+	background-color: #BFDFFF;
+	padding: 2px;
+	border: 1px solid #666666;
+	margin: 20px;
+	width: 95%;
+}
+.style1 {color: #0000FF}
+-->
+</style>
+</head>
+
+<body>
+<h2>Come usare il Modulo Sconti Coupon</h2>
+<h3>Contenuti:</h3>
+<ul>
+  <li><a href="#configure">Configurazione del Modulo Totale Ordine</a></li>
+  <li><a href="#creating">Creazione dei Codici di Sconto per Coupon</a>
+    <ul>
+      <li><a href="#fields">Spiegazione dei campi Sconti Coupon</a>
+      </li>
+    </ul>
+  </li>
+  <ul>
+    <li><a href="#exclusions">Esclusioni</a></li>
+  </ul>
+  <li><a href="#support">Supporto</a></li>
+</ul>
+<h3><a name="configure"></a>Configurazione del Modulo Totale Ordine</h3>
+ <p>Per configurare il modulo Codici Sconti Coupon, andare in <strong>Modulo
+   &gt; Totale Ordini &gt; Sconti Coupon</strong> dal pannello amministrazione
+   del sito web. Cliccare il tasto <strong>Modifica</strong> nel lato destro dello
+   schermo per modificare le opzioni di configurazione. Le spiegazioni di ciascuna
+   opzione sono fornite di seguito:</p>
+ <ul><li><strong>Abilitare i coupon sconti ?</strong>   <br>
+    Impostare quest'opzione a 'true' per usare il modulo sconti coupon.
+	Se quest'opzione &egrave; impostata a 'false', il riquadro Codici Sconti Coupon non
+	apparir&agrave; nella pagina del checkout del pagamento.</li>
+   <li><strong>Ordine Visualizzazione</strong>     <br>
+     Impostare quest'opzione ad un valore UNIVOCO. Ogni modulo totale ordini deve
+	 avere un unico valore 'sort order' (ordine visualizzazione), altrimenti potrebbero
+	 non essere visualizzati correttamente.</li>
+   <li><strong>Visualizzare gli sconti con un segno meno ('-') ?</strong>   <br>
+     Impostare quest'opzione a 'true' per visualizzare lo sconto con un segno meno ('-')
+	 nella conferma d'ordine, nelle fatture, etc. Se quest'opzione è impostata a 'false',
+	 la riga contenente lo sconto visualizzer&agrave; semplicemente il totale dello sconto. </li>
+   <li><strong>Visualizzare il subtotale comprensivo di sconto ?</strong>  <br>
+     Impostare quest'opzione a 'true' per visualizzare il totale dell'ordine comprensivo
+	 dello sconto applicato. Se quest'opzione &egrave; impostata a 'true', sar&agrave; pi&ugrave; opportuno
+	 impostare l'ordine di visualizzazione della riga che mostra lo sconto, in modo tale che appaia prima
+	 della riga contenente il subtotale dell'ordine, come di seguito:
+       <br>
+       <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+         <tr>
+           <td align="right">Prodotto Doodle x 1:&nbsp;&nbsp;&nbsp;</td>
+           <td>$25.00</td>
+         </tr>
+         <tr>
+           <td align="right">Sconto Coupon XYZ Applicato:&nbsp;&nbsp;&nbsp;</td>
+           <td>-$5.00</td>
+         </tr>
+         <tr>
+           <td align="right">Subtotale:&nbsp;&nbsp;&nbsp;</td>
+           <td>$20.00</td>
+         </tr>
+         <tr>
+           <td align="right">Tasse:&nbsp;&nbsp;&nbsp;</td>
+           <td>$1.39</td>
+         </tr>
+         <tr>
+           <td align="right">Totale:&nbsp;&nbsp;&nbsp;</td>
+           <td>$21.39</td>
+         </tr>
+       </table>
+         Se quest'opzione è impostata a 'false', lo sconto non sar&agrave; applicato al subtotale.
+		 In questo caso, sar&agrave; preferibile impostare l'ordine di visualizzazione per
+		 i coupon sconto, in modo tale che vengano visualizzati dopo la riga contenente il subtotale
+		 dell'ordine:
+         <br>
+         <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+           <tr>
+             <td align="right">Prodotto Doodle x 1:&nbsp;&nbsp;&nbsp;</td>
+             <td>$25.00</td>
+           </tr>
+           <tr>
+             <td align="right">Subtotale:&nbsp;&nbsp;&nbsp;</td>
+             <td>$25.00</td>
+           </tr>
+           <tr>
+             <td align="right">Sconto Coupon XYZ Applicato:&nbsp;&nbsp;&nbsp;</td>
+             <td>-$5.00</td>
+           </tr>
+           <tr>
+             <td align="right">Tasse:&nbsp;&nbsp;&nbsp;</td>
+             <td>$1.39</td>
+           </tr>
+           <tr>
+             <td align="right">Totale:&nbsp;&nbsp;&nbsp;</td>
+             <td>$21.39</td>
+           </tr>
+         </table>
+   </li>
+   <li><strong>Escludere i prodotti speciali ?</strong><br>
+     Se impostata a 'true', gli sconti non verranno applicati ai prodotti in offerta speciale al momento. </li>
+   <li><strong>Dimensione dei Codici Casuale</strong>  <br>
+     Quando viene creato un nuovo coupon, il modulo Coupon Sconti creer&agrave; una serie di lettere e numeri.
+	 Questa opzione controlla la lunghezza dei codici generati casualmente</li>
+   <li><strong>Visualizzare gli sconti applicati per ogni gruppo di tasse ?</strong> <br>
+	 I coupon di sconto sono applicati ad ogni elemento separatamente, in modo da calcolare
+	 adeguatamente le tasse, se c'&egrave; pi&ugrave; di un gruppo di tasse (tasse locali, e tasse statali negli stati uniti, ad esempio).
+	 Impostare quest'opzione a 'true' se si vuole visualizzare lo sconto applicato ad ogni gruppo di tasse.
+	 Impostare quest'opzione a 'false' per combinare lo sconto e visualizzarlo come una sola riga di totale ordine.
+	 Se viene utilizzata una sola classe di tasse (p.e.: iva al 20%), questa impostazione viene ignorata.
+   </li>
+   <li><strong>Permettere totali ordini negativi ?</strong> <br>
+     Impostare quest'opzione su 'false' per prevenire la generazione di totali ordini negativi.
+	 Quest'evenienza potrebbe avverarsi nel caso in cui si impostino sconti fissi, senza minimi d'ordine impostati.</li>
+   <li><b>Utilizzare il file di linguaggio per formattare la dicitura di visualizzazione ?</b><br/>
+     Quando sono installati pi&ugrave; lingue a si desidera che la riga del totale dell'ordine
+	 per lo sconto appaia nella lingua selezionata dal cliente, sar&agrave; necessario
+	 impostare quest'opzione su 'true', e modificare il il file includes/languages/<em>lingua_selezionata</em>/modules/order_total/ot_discount_coupon.php .
+	 Se viene usata una sola lingua, si pu&ograve; impostare quest'opzione su 'false' 
+	 ed usare il campo '<strong>Display Format for Order Total Line</strong> per formattare
+	 la linea del totale ordine. Se questa opzione &egrave; impostata su 'true', allora 
+	 il valore nell'opzione di configurazione <strong>Display Format for Order Total Line</strong> sar&agrave; ignorato.</li>
+   <li><strong>Formato di Visualizzazione per la riga Del Totale Ordine</strong>     <br>
+     Modificare questa impostazione per cambiare il modo in cui la riga del totale ordine per il coupon di sconto
+	 &egrave; visualizzata nella pagina di conferma del checkout, nell'email di conferma d'ordine, e nella fattura.
+	 Si possono inserire le variabili per visualizzare dati dinamici, come ad esempio il codice del coupon utilizzato
+	 o la percentuale di sconto.
+	 Ad esempio, se venisse inserito questo valore :&quot;<span class="style1">Codice del Coupon Sconto [code] per 
+	 [discount_amount] di sconto</span>&quot; visualizzerebbe una fattura di questo tipo:
+   <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+         <tr>
+           <td align="right">Subtotale:&nbsp;&nbsp;&nbsp;</td>
+           <td>$25.00</td>
+         </tr>
+         <tr>
+           <td align="right"><span class="style1">Codice del Coupon Sconto  XYZ per 20%
+           di sconto</span>:&nbsp;&nbsp;&nbsp;</td>
+           <td>-$5.00</td>
+         </tr>
+         <tr>
+           <td align="right">Tasse:&nbsp;&nbsp;&nbsp;</td>
+           <td>$1.39</td>
+         </tr>
+         <tr>
+           <td align="right">Totale:&nbsp;&nbsp;&nbsp;</td>
+           <td>$21.39</td>
+         </tr>
+     </table>
+     Lista delle variabili disponibili:
+       <ul> 
+         <li>[code] (<i>Codice Coupon</i>)</li>
+         <li>[coupon_desc] (<i>Descrizione Coupon</i>)</li>
+         <li>[discount_amount] (<i>Ammonto Sconto</i>)</li>
+         <li>[min_order] (<i>Ordine minimo consentito</i>)</li>
+         <li>[number_available] (<i>Numero di sconti disponibili</i>)</li>
+         <li>[tax_desc] (<i>Descrizione tassa</i>)</li>
+       </ul>
+   </li>
+   <li><strong>Modalit&agrave; provvisoria</strong><br>
+	 Impostare quest'opzione a 'true' per ottenere la visualizzazione di alcune informazioni utili
+	 al debug, in checkout_confirmation.php.
+     Per leggere le informazioni di debug, selezionare "Visualizza Sorgente" nel browser utilizzato.
+	 Le informazioni di debug sono racchiuse fra i commenti html:
+	 &quot;&lt;!-- Discount Coupons DEBUG&quot; 
+	 e &quot;End
+       Discount Coupons DEBUG--&gt;&quot; all'inizio del file.</li>
+<p class="notice"><strong>Attenzione:</strong> Quando la modalit&agrave; provvisoria &egrave; impostata ('true' selezionato),
+	i messaggi d'errore non funzionano: l'utente non sar&agrave; rimandato alla pagina di pagamento in presenza di un errore</span>
+ </ul>
+ <h3><a name="creating"></a>Creazione dei Codici di Sconto per Coupon</h3>
+ <p>Loggarsi nella sezione amministrativa ed andare su <strong>Catalogo   &gt; Coupon Sconti</strong>. 
+	Cliccare sul tasto <strong>Nuovo Coupon</strong> per creare un nuovo Codice di Sconto per Coupon
+	Il solo campo obbligatorio &egrave; l'ammontare dello sconto.</p>
+ <p>Una volta creato il codice di sconto per coupon, questo pu&ograve; essere distribuito in qualsiasi formato
+   . La sola informazione che il cliente necessita per usare il coupon di sconto &egrave; il codice che &egrave;
+   stato generato durante la creazione. I codici possono essere diffusi tramite newsletters, conferme d'ordine, etc.</p>
+ <p>Gli sconti sono visualizzati come righe di totale d'ordine nella schermata di conferma del checkout, nella
+	schermata dello storico degli ordini, e in tutte le schermate degli ordini nella sezione admin.
+</p>
+ <p>Gli sconti sono applicati PRIMA del calcolo delle tasse</p>
+ <h4><a name="fields"></a>Spiegazione dei campi Sconti Coupon : </h4>
+ <ul>
+   <li> <strong>Codice Coupon</strong>     <br>
+	Questo &egrave; il codice che deve essere fornito ai clienti
+	e che essi inseriranno durante il procedimento del checkout.
+	Consiste di qualsiasi carattere alfanumerico, e pu&egrave; essere lungo
+	fino a 32 caratteri.
+	Se questo campo viene lasciato vuoto, viene generato un codice alfanumerico
+	casuale. Vedi <strong>Random Code Length</strong> in <a href="#configure">Configurazione del Modulo Totale Ordine </a>
+	per modificare la lunghezza dei codici generati automaticamente.
+	Questo campo non pu&ograve; essere modificato per i coupon gi&agrave; generati.</li>
+   <li><strong>Descrizione</strong>     <br>
+    Questo campo &egrave; una breve descrizione per facilitare la gestione dei coupon.
+	Il contenuto di questo campo non viene mostrato al cliente, a meno che non sia richiesto
+	esplicitamente nel formato del totale ordine.
+	Vedi <strong>Display
+       Format for the Order Total Line</strong> in <a href="#configure">Configurazione del Modulo Totale Ordine</a>.</li>
+   <li><strong>Ammontare Sconto</strong>     <br>
+    Il totale dello sconto applicato all'ordine<br>
+     <p class="notice">- Per sconti in percentuale, inserire l'ammontare come un decimale
+       Per esempio, <strong>.15</strong>   invece di 15 o 15% per uno sconto pari al 15% <br>
+   - Per sconti fissi, inserire l'ammontare esatto, cos&grave; come si intende che appaia.
+   Per esempio, <strong>10</strong> per uno sconto di &euro;10 <br>
+   - Per sconti sulla spedizione, inserire la percentuale di sconto che si intende offrire
+   Per esempio, <strong>1</strong> per spedizione gratuita, <strong>.5</strong> per uno sconto del 50% sulla spedizione
+	</p> 
+   </li>
+   <li><strong>Tipo Sconto</strong><br>
+     Selezionare il tipo di sconto. Assicurarsi che l'ammontare dello sconto sia
+	 nel formato adatto al tipo di sconto scelto.</li>
+   <li> <strong>Data Attivazione</strong>     <br>
+     Inserire una data d'attivazione se si desidera limitare l'inizio del periodo
+	 in cui i clienti potranno iniziare ad utilizzare questo coupon.
+	 Si pu&ograve; lasciare questo campo vuoto se si desidera permettere ai clienti
+	 di utilizzare questo coupon da subito
+   </li>
+   <li><strong>Data Scadenza</strong>     <br>
+	 Inserire una data di scadenza se si desidera limitare la durata del periodo di validit&agrave;
+	 del coupon.
+	 Si pu&ograve; lasciare questo campo vuoto se si desidera permettere ai clienti di utilizzare
+	 indefinitamente a lungo questo coupon.
+	 <p class="notice">La data d'attivazione e la data di scadenza devono essere nello stesso formato
+	 specificato nel file admin/includes/languages/italian.php (o il file principale delle definizioni
+	 nella lingua della sezione amministrativa</p>
+   </li>
+   <li><strong>Utilizzo max.</strong>     <br>
+     Inserire il massimo numero di volte che ogni singolo cliente pu&ograve; usufruire di questo coupon.
+	 Se non si inserisce un valore, o se si inserisce lo zero, il cliente potr&agrave; usufruire di questo
+	 coupon un numero illimitato di volte.              </li>
+   <li><strong>Ordine Minimo</strong>     <br>
+     Inserire il minimo subtotale dell'ordine che un cliente debba raggiungere prima di poter usufruire di
+	 questo coupon. Se non viene inserito un valore o se viene inserito lo zero, non sar&agrave; richiesto
+	 un ordine minimo per poter utilizzare il coupon.</li>
+   <li><strong>Tipo ordine min.</strong>     <br>
+     Selezionare il tipo di restrizione sull'ordine minimo che si desidera utilizzare. Se si seleziona
+	 Prezzo Totale, il minimo totale dell'ordine richiesto al cliente per potere utilizzare il coupon
+	 sar&agrave; pari al valore inserito nel campo Ordine Minimo. Se si seleziona Quantit&grave; Prodotti
+	 , il minimo numero di elementi richiesti al cliente per potere usufruire del coupon sar&agrave; pari
+	 al valore inserito nel campo Ordine Minimo. </li>
+   <li><strong>Disponibile</strong>     <br>
+     Inserire il numero globale di coupon disponibili.
+	 Si pu&ograve; utilizzare questo campo per limitare il numero di volte che il coupon potr&agrave; essere
+	 utilizzato per l'intero negozio. Questo campo pu&ograve; essere usato per dare uno sconto ai primi 200 clienti
+	 di un particolare giorno, per esempio.</li>
+ </ul>
+ <h4><a name="exclusions" id="exclusions"></a>Esclusioni</h4>
+ <p>Si possono gestire i prodotti, le categorie, i produttori, i clienti e le zone di destinazione
+	della merce escluse per ogni coupon che viene creato. I clienti non saranno avvertiti che un prodotto
+	&egrave; escluso a meno che il totale dell'ordine/della quantit&grave; dei prodotti non esclusi non soddisfi
+	il criterio dell'Ordine min. per il coupon.
+	In quel caso, non saranno avvertiti riguardo quale elemento in particolare sia escluso.
+	Se si creano coupon con esclusioni, si raccomanda di assicurarsi che i clienti sappiano quali prodotti
+	sono esclusi, in modo da evitare confusioni.</p>
+ <p>E' necessario creare un coupon prima di poterne gestire le esclusioni. Vedere la sezione 
+   <a href="#creating">Creare Coddici di Sconto Coupon</a> per maggiori informazioni. </p>
+ <p>Registrarsi nella sezione amministrativa ed andare in <strong>Catalogo &gt; Coupons Sconti</strong>.
+   Selezionare il coupon per il quale si desidera gestire le esclusioni. Nel riquadro nel lato destro
+   del monitor, saranno visualizzati sei tasti: modifica, elimina, esclusioni prodotti, esclusioni produttori
+   , esclusione categorie, esclusioni clienti e esclusioni zone spedizioni. Cliccare sul tasto relativo
+   al tipo di esclusione che si desidera creare.</p>
+ <p>Le quattro schermate delle esclusioni funzionano in modo simile. Il riquadro alla sinistra elencher&agrave;
+   i prodotti/produttori/categorie/clienti per i quali il coupon NON &egrave; escluso.
+   Il riquadro sulla destra elencher&agrave; invece i prodotti/produttori/categorie/clienti per i quali il
+   coupon <b>&egrave;</b> escluso. Si utilizzino i quattro tasti in alto fra i due riquadri per 
+   spostare elementi da un riquadro all'altro. Cliccare sul tasto "Salva" quando si &egrave; terminata l'impostazione.</p>
+ <p class="notice">Se un prodotto &egrave; in <em>qualsiasi</em> categoria esclusa, sar&agrave; considerato un elemento
+   escluso. Per esempio: il prodotto A &egrave; nella Categoria 1 e nella Categoria 2. La Categoria 1 &egrave; una categoria
+   esclusa. Anche se un cliente vede il Prodotto A nella Categoria 2 e lo aggiunge al suo carrello, il prodotto sar&agrave;
+   comunque considerato escluso perch&egrave; la Categoria 1 &egrave; esclusa.</p>
+ <p>Si possono modificare i campi che sono visualizzati nei riquadri esclusioni, modificando il codice seguente
+   a partire dalla riga 17 in admin/coupons_exclusions.php:</p>
+ <pre class="code">
+  /**********************************************/
+  //toggle these true/false to determine which fields to display in product list in the same order as they are listed below
+
+  $display_fields = array(
+                          'categories' => array( 'c.categories_id' => false,
+                                                 'cd.categories_name' => true ),
+                                                 
+                          'customers' => array( 'c.customers_id' => false,
+                                                'CONCAT( c.customers_firstname, CONCAT( " ", c.customers_lastname ) ) AS name' => true,
+                                                'c.customers_email_address' => false ),
+
+                          'manufacturers' => array( 'm.manufacturers_id' => false,
+                                                    //'mi.manufacturers_url' => false,
+                                                    'm.manufacturers_name' => true ),
+
+                          'products' => array( 'p.products_id' => false,
+                                               'p.products_model' => false,
+                                               'pd.products_name' => true,
+                                               'p.products_price' => false ) );
+
+  //separator for the fields in the listing
+  $separator = ' :: ';
+
+  //category exclusions
+  //separator for the category names
+  $category_separator = '->';
+  //toggle true/false to determine whether to display the full category path
+  $category_path = true;
+  //end category exclusions
+
+  /**********************************************/</pre>
+ <p>Si pu&ograve; evitare la visualizzazione di un campo modificando il relativo stato true/false
+   nell'array $display_fields. Le altre impostazioni servono per modificare i caratteri usati per separare
+   i campi multipli nei riquadri esclusioni.</p>
+ <h3><a name="support"></a>Supporto</h3>
+ <p>E' disponibile un supporto per questa contrib al seguente indirizzo <a href="http://forums.oscommerce.com/index.php?showtopic=213019">http://forums.oscommerce.com/index.php?showtopic=213019</a> (OSCommerce
+   User Forums).<strong> Prego leggere attentamente i problemi comuni nel file install.html, oppure i post precedenti
+   per controllare se il proprio problema &egrave; stato gi&agrave; risolto.</strong> 
+   Se si esegue un post riguardante eslusioni o calcoli, prego impostare a "true" la <strong>Modalit&agrave;
+   Provvisoria</strong> in <a href="#configure">Configurazione del Modulo Totale Ordini</a> per raccogliere le informazioni
+   di debug ed includerle nel proprio post. </p>
+ <p>Risoluzioni di Bug e nuovi rilasci vengono aggiunti alla pagina contributi su <a href="http://www.oscommerce.com/community/contributions,4269">http://www.oscommerce.com/community/contributions,4269</a>.</p>
+</body>
+</html>

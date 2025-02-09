@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Categories Box</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start categorybox //-->
+<div metal:define-macro="sub_tree" tal:omit-tag="">
+	<ul id="catsubtree">
+	    <li id="catentry" tal:repeat="node nodes" tal:attributes="id node/nodename">
+	    	<a tal:condition="not:node/open" tal:attributes="href node/href">
+				<img tal:condition="php:(sizeof(node['subcategories']) GT 0)" src="images/cat_arrow_right.gif" border="0" align="absmiddle"/>
+				<img tal:condition="php:sizeof(node['subcategories']) EQ 0" src="images/cat_arrow_other.gif" border="0" align="absmiddle"/>
+				<span tal:omit-tag="" tal:content="structure node/name">Hardware</span>
+				<span tal:omit-tag="" tal:condition="php:(constant('SHOW_COUNTS') eq 'true')">&nbsp;(<span tal:omit-tag="" tal:content="node/num_products"/>)</span>
+				<span tal:omit-tag="" tal:condition="php:(sizeof(node['subcategories']) GT 0)">&nbsp;-&gt;</span>
+			</a>
+	    	<a tal:condition="node/open" class="activelink" tal:attributes="href node/href">
+				<img tal:condition="php:(sizeof(node['subcategories']) GT 0)" src="images/cat_arrow_down.gif" border="0" align="absmiddle"/>
+				<img tal:condition="php:sizeof(node['subcategories']) EQ 0" src="images/cat_arrow_other.gif" border="0" align="absmiddle"/>
+				<b>
+					<span tal:omit-tag="" tal:content="structure node/name">Hardware</span>
+					<span tal:omit-tag="" tal:condition="php:(constant('SHOW_COUNTS') eq 'true')">&nbsp;(<span tal:omit-tag="" tal:content="node/num_products"/>)</span>
+					<span tal:omit-tag="" tal:condition="php:(sizeof(node['subcategories']) GT 0)">&nbsp;-&gt;</span>
+				</b>
+			</a>
+	   		<span tal:condition="php:(sizeof(node['subcategories']) GT 0) and node['open']" tal:define="nodes node/subcategories" metal:use-macro="sub_tree"/>
+	   	</li>
+   	</ul>
+</div>
+<span tal:comment="La skin box_simple_header richiede la definizione della variabile 'title'"
+      tal:define="title box_heading"
+      metal:use-macro="boxes.htm/box_simple_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <span metal:fill-slot="box_contents">
+    	<div id="catmaintree"><span tal:define="nodes categories" metal:use-macro="sub_tree"/></div>
+	  </span>
+</span>
+<!-- end categorybox //-->
+</body>
+</html>

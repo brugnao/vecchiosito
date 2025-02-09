@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/oscommerce_pws/!svn/ver/5392/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes
+END
+payment_module_info.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/payment_module_info.php
+END
+Model.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/5335/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/Model.php
+END
+shopping_cart.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/shopping_cart.php
+END
+table_block.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/table_block.php
+END
+currencies.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/currencies.php
+END
+coupons_exclusions.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/oscommerce_pws/!svn/ver/4120/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/coupons_exclusions.php
+END
+phplot.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/phplot.php
+END
+sessions.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/3981/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/sessions.php
+END
+split_page_results.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/split_page_results.php
+END
+message_stack.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/message_stack.php
+END
+CsvIterator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/3803/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/CsvIterator.class.php
+END
+order.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/2294/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/order.php
+END
+Category.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/5335/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/Category.php
+END
+logger.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/logger.php
+END
+turbolister2_connection.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/oscommerce_pws/!svn/ver/5391/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/turbolister2_connection.php
+END
+object_info.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/object_info.php
+END
+language.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/language.php
+END
+upload.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/oscommerce_pws/!svn/ver/1745/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/upload.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/4276/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/class.pop3.php
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/oscommerce_pws/!svn/ver/4276/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/class.phpmailer.php
+END
+Categories.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/5392/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/Categories.php
+END
+mime.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/mime.php
+END
+email.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/email.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/4276/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/class.smtp.php
+END
+box.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/classes/box.php
+END

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <center>
+<table id="shopwindow" class="shopwindow_table" tal:condition="php:(sizeof(products) GT 0)"  border="0" cellspacing="0" cellpadding="0">
+	<tr class="shopwindow_row" tal:repeat="products_row products">
+	  <td class="shopwindow_cell" tal:repeat="product products_row">
+	  	<table class="shopwindow_product" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+		   <td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="shopwindow_productsName"><a tal:attributes="href product/products_link"><span class="shopwindow_productsName" tal:content="structure product/products_name">Nome Prodotto</span></a>
+<br></br>
+</td>
+</tr>
+</table>
+		    <table border="0" cellspacing="5" cellpadding="0" align="center">
+             <tr>
+			  <td tal:content="structure product/products_image_lightbox">Lighbox set se ci sono immagini multiple
+					</td>
+		
+  				 </tr>
+                <tr nowrap="nowrap">
+                  <td class="shopwindow_productsPrice"></td>
+                </tr>
+
+
+		   
+			</table>
+		   </td>
+		  </tr>
+		  <tr>
+		   <td>
+      
+			<table width="100%" border="0" cellspacing="10" cellpadding="0" class="pr">
+             <tr>
+<td valign="absmiddle"><span tal:omit-tag="" tal:content="structure product/products_price" > Prezzo Normale</span></td>
+<td valign="absmiddle"><a tal:attributes="href product/products_link"><img class="shopwindow_productsDetails" src="includes/languages/italian/images/buttons/button_details.gif" /></a><br /><br /><a tal:attributes="href product/cart_link"><img class="shopwindow_cartButton" src="includes/languages/italian/images/buttons/button_buy_now.gif"/></a></td>
+             </tr>
+            </table>
+		   </td>
+		  </tr>
+		 </table>
+		</td>
+	   </tr>
+	  </table>
+	 </center>
+</body>
+</html>

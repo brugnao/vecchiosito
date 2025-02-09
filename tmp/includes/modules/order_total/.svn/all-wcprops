@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/oscommerce_pws/!svn/ver/5377/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total
+END
+ot_bonifico_fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/oscommerce_pws/!svn/ver/5288/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_bonifico_fee.php
+END
+ot_tax.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_tax.php
+END
+ot_loworderfee.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_loworderfee.php
+END
+ot_subtotal.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_subtotal.php
+END
+ot_shipping.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_shipping.php
+END
+ot_postepay_fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/oscommerce_pws/!svn/ver/5377/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_postepay_fee.php
+END
+ot_total.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_total.php
+END
+ot_cod_fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/oscommerce_pws/!svn/ver/5285/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_cod_fee.php
+END
+ot_paypal_fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/oscommerce_pws/!svn/ver/5293/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/order_total/ot_paypal_fee.php
+END

@@ -1,0 +1,19 @@
+/* Stili per il menu del box categorie */
+#catmaintree dl, #catmaintree dt, #catmaintree dd, #catmaintree ul, #catmaintree li {
+	list-style-type:none;
+	margin:0 0 0 0;
+	padding: 5px 0;
+}
+#catmaintree {
+	width:100%;
+height: auto;
+	
+}
+#catsubtree ul {
+	padding:0 0 0 10px;
+	/*display:none;*/
+}
+#catsubtree ul:hover {
+	padding:0 0 0 10px;
+	display:block;
+}

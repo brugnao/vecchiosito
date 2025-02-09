@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Boxes Macros Definitions for Modules</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" metal:define-macro="module_box_simple_header">
+  <tr>
+    <td width="100%" height="14" class="infoBoxHeading1" tal:content="structure title|default">Titolo del box</td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" metal:define-macro="module_box_complete_header">
+  <tr>
+    <td width="100%" height="14" class="infoBoxHeading1" tal:content="structure box_heading">Titolo del box</td>
+    <td tal:condition="more/visible" height="14" class="infoBoxHeading1" nowrap="true"><a tal:attributes="href more/link"><img tal:attributes="src more/image;title more/title;alt more/title" border="0"/></a></td>
+  </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="infoBox" metal:define-macro="module_box_body">
+  <tr>
+    <td>
+      <table border="0" width="100%" cellspacing="0" cellpadding="2" class="infoBoxContents">
+		  <tr>
+		    <td>
+			  <span metal:define-slot="box_contents"/>
+		 	</td>
+		  </tr>
+	  </table>
+	</td>
+  </tr>
+</table>
+</body>
+</html>

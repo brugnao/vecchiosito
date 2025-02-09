@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <center>
+<table id="shopwindow" class="shopwindow_table" tal:condition="php:(sizeof(products) GT 0)"  border="0" cellspacing="0" cellpadding="0">
+	<tr class="shopwindow_row" tal:repeat="products_row products">
+	  <td class="shopwindow_cell" tal:repeat="product products_row">
+	  	<table class="shopwindow_product" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+		   <td>
+		    <table border="0" cellspacing="5" cellpadding="0">
+             <tr>
+			  <td><a tal:attributes="href product/products_image_link" tal:content="structure product/products_image">Immagine Prod</a></td>
+			  <td>
+               <table cellspacing="10" cellpadding="0" tal:condition="product/special_price">
+                <tr nowrap="nowrap">
+                  <td class="shopwindow_productsPriceSlashed">&euro; <span tal:omit-tag="" tal:content="structure product/products_price" > Prezzo Listino</span></td >
+                </tr>
+				<tr>
+				  <td class="shopwindow_productSpecialPrice">&euro; <span tal:omit-tag=""  tal:content="product/special_price">Prezzo Speciale</span></td>
+				</tr>
+               </table>
+			   <table cellspacing="10" cellpadding="0" tal:condition="not:product/special_price">
+                <tr nowrap="nowrap">
+                  <td class="shopwindow_productsPrice">&euro; <span tal:omit-tag="" tal:content="structure product/products_price" > Prezzo Normale</span></td >
+                </tr>
+			   </table>
+			  </td>
+		     </tr>
+			</table>
+		   </td>
+		  </tr>
+		  <tr>
+		   <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			 <tr>
+			  <td class="shopwindow_productsName"><a tal:attributes="href product/products_link"><span class="shopwindow_productsName" tal:content="structure product/products_name">Nome Prodotto</span></a>
+                <br></br>
+                <a tal:attributes="href product/manufacturers_link"><span class="shopwindow_manufacturersName" tal:content="structure product/manufacturers_name">Nome Produttore</span></a></td>
+		     </tr>
+            </table>
+			<table width="100%" border="0" cellspacing="10" cellpadding="0">
+             <tr>
+              <td valign="absmiddle"><a tal:attributes="href product/cart_link"><img class="shopwindow_cartButton" src="includes/languages/italian/images/buttons/button_buy_now.gif"/></a></td>
+              <td valign="absmiddle"><a tal:attributes="href product/products_link"><img class="shopwindow_productsDetails" src="includes/languages/italian/images/buttons/button_details.gif" /></a></td>
+             </tr>
+            </table>
+		   </td>
+		  </tr>
+		 </table>
+		</td>
+	   </tr>
+	  </table>
+	 </center>
+</body>
+</html>

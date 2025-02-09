@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Categories Listing</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start searchbox //-->
+<span tal:comment="	La skin box_complete_header richiede la definizione della variabile 'title'
+					e della variabile more, un array che contiene un link, una variabile booleana 'visible',
+					un'indirizzo dell'immagine della freccia 'image', ed un 'title' per la freccia"
+      tal:define="title box_heading;more more"
+      metal:use-macro="boxes.htm/box_complete_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <center metal:fill-slot="box_contents">
+      <form tal:attributes="name form/name;id form/id;action form/action;method form/method">
+      	<input type="text" name="keywords" size="30" maxlength="30" style="width: 124px"/>
+      	&nbsp;<input type="hidden" tal:attributes="name session/name;value session/id"/>
+      	<span tal:omit-tag="" tal:content="structure submit_image"/>
+      	<br/>
+      	<a tal:attributes="href more/link;"><b tal:content="structure more/long_text">Ricerca avanzata</b></a>
+      </form>
+	  </center>
+</span>
+<!-- end searchbox //-->
+</body>
+</html>

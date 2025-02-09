@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/oscommerce_pws/!svn/ver/5245/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes
+END
+seo.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/oscommerce_pws/!svn/ver/4855/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/seo.class.php
+END
+pad_base.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/oscommerce_pws/!svn/ver/4646/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/pad_base.php
+END
+cc_validation.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/cc_validation.php
+END
+pad_sequenced_dropdowns.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/pad_sequenced_dropdowns.php
+END
+pad_single_radioset.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/pad_single_radioset.php
+END
+shopping_cart.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/5063/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/shopping_cart.php
+END
+currencies.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/5063/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/currencies.php
+END
+breadcrumb.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/breadcrumb.php
+END
+sessions.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/sessions.php
+END
+image_bestshopping_php5.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/oscommerce_pws/!svn/ver/4666/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/image_bestshopping_php5.class.php
+END
+split_page_results.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/split_page_results.php
+END
+message_stack.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/message_stack.php
+END
+CsvIterator.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/5076/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/CsvIterator.class.php
+END
+discount_coupon.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/5130/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/discount_coupon.php
+END
+order.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/oscommerce_pws/!svn/ver/5081/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/order.php
+END
+http_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/http_client.php
+END
+payment.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/payment.php
+END
+order_total.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/order_total.php
+END
+pad_multiple_dropdowns.php
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/pad_multiple_dropdowns.php
+END
+navigation_history.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/navigation_history.php
+END
+boxes.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/boxes.php
+END
+pad_single_dropdown.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/pad_single_dropdown.php
+END
+shipping.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/oscommerce_pws/!svn/ver/5245/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/shipping.php
+END
+language.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/language.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/4281/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/class.pop3.php
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/4281/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/class.phpmailer.php
+END
+mime.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/mime.php
+END
+email.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/email.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/4281/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/classes/class.smtp.php
+END

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css"/>
+<link href="../../osadmin/includes/stylesheet.css" type="text/css"/>
+</head>
+
+<body><tr bgcolor="#ebebff">
+		<td colspan="2">
+		 <fieldset><legend><input type="checkbox" id="pws_quantities_status" name="pws_quantities_status" value="1" checked="true" onClick="onQuantityDiscountsChange()" tal:condition="pws_quantities_status"/><input type="checkbox" id="pws_quantities_status" name="pws_quantities_status" value="1" onClick="onQuantityDiscountsChange()" tal:condition="not:pws_quantities_status"/><label for="pws_quantities_status" class="pws_fieldset_label" tal:content="text_pws_quantities_status">TEXT_PWS_QUANTITIES_STATUS</label></legend>
+		 <div id="pws_quantities_div" tal:attributes="style panelstyle"><table>
+			
+			
+		  <tr bgcolor="#ebebff">
+		  	<td class="main" colspan="2">
+			 <table cellpadding="0" cellspacing="0" id="pws_quantity_discounts_table_edit" border="0" class="pws_offer_strips_table_edit">
+			  <thead>
+			   <tr>
+			    <th tal:repeat="headingrow headingsarray" tal:content="headingrow"></th><th tal:replace="">TEXT_PWS_QUANTITIES_DISCOUNT_STRIPS_NUM</th><th tal:replace="">TEXT_PWS_QUANTITIES_DISCOUNT_START</th><th tal:replace="">TEXT_PWS_QUANTITIES_DISCOUNT_STOP</th><th tal:replace="">TEXT_PWS_QUANTITIES_DISCOUNT_PERCENTAGE</th><!--<th tal:replace="">TEXT_PWS_QUANTITIES_DISCOUNT_PRICE_GROSS</th>--><th tal:replace="">TEXT_PWS_QUANTITIES_DISCOUNT_PRICE_WEB</th>
+			   </tr>
+			  </thead>
+			  <tbody>
+			  	<tr tal:repeat="strip strips">
+				 <td><label>&nbsp;<span tal:omit-tag="" tal:content="repeat/strip/index">n.intervallo</span>&nbsp;<input tal:condition="strip/numstrip_checked" type="radio" id="pws_quantities_num_strips" name="pws_quantities_num_strips" checked="true" tal:attributes="value repeat/strip/index;onclick strip/numstrip_onchange"/><input tal:condition="not: strip/numstrip_checked" type="radio" id="pws_quantities_num_strips" name="pws_quantities_num_strips" tal:attributes="value repeat/strip/index;onclick strip/numstrip_onchange"/></label></td>
+				 <td tal:condition="strip/first"></td><td tal:condition="not: strip/first"><input type="text" tal:attributes="id strip/start_id;name strip/start_name;value strip/qty_start;onkeyup strip/start_onkeyup;onblur strip/start_onblur"/></td>
+				 <td tal:condition="strip/first"></td><td tal:condition="not: strip/first"><input type="text" tal:attributes="id strip/stop_id;name strip/stop_name;value strip/qty_stop;onkeyup strip/stop_onkeyup;onblur strip/stop_onblur"/></td>
+				 <td tal:condition="strip/first"></td><td tal:condition="not: strip/first"><input type="text" tal:attributes="id strip/discount_id;name strip/discount_name;value strip/discount" onkeyup="updateQuantitiesDiscounts()" onblur="updateQuantitiesDiscounts()"/></td>
+				<!-- <td tal:condition="strip/first"></td><td tal:condition="not: strip/first"><input type="text" tal:attributes="id strip/dpricegross_id;name strip/dpricegross_name;" readonly="true"/></td>-->
+				 <td tal:condition="strip/first"></td><td tal:condition="not: strip/first"><input type="text" tal:attributes="id strip/dpriceweb_id;name strip/dpriceweb_name;" readonly="true"/></td>
+				 <td tal:condition="strip/first"></td><td tal:condition="not: strip/first"><input type="text" tal:attributes="id strip/dpricegross_id;name strip/dpricegross_name;" readonly="true"/></td>
+				</tr>
+			  </tbody>
+			 </table>
+			</td>
+		  </tr>
+		  </table></div></fieldset></td></tr>
+		  </body>
+</html>

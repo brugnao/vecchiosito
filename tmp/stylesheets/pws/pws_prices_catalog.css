@@ -1,0 +1,55 @@
+/* PWS_PRICES STYLES sezione front-end*/
+
+/* Stili per i prezzi */
+.productsPrice,.productSpecialPrice,.productsPriceSlashed{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+	color:black;
+}
+.productsPrice{
+	font-weight: bold;
+}
+.productSpecialPrice{
+	font-weight: bold;
+	color: red;
+}
+.productsPriceSlashed{
+	font-weight: normal;
+	font-size: 88%;
+	text-decoration: line-through;
+}
+
+
+
+/*
+ Table usata per il riassunto del prezzo prodotto
+ nel checkout_confirmation, nel riassunto dell'ordine,
+ e nel carrello
+ */
+#pws_prices_resume_table,#pws_prices_resume_table td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:10px;
+}
+
+/*
+ Table usata per il riassunto del prezzo prodotto
+ nella scheda prodotto (product_info)
+ */
+ 
+#pws_prices_discounts_table{
+	
+}
+#pws_prices_discounts_table,#pws_prices_discounts_table tr td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:12px;
+	font-weight:normal;
+	
+}
+
+#pws_prices_discounts_table_big,#pws_prices_discounts_table_big tr td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:12px;
+}

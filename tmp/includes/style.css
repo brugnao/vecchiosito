@@ -1,0 +1,66 @@
+td {
+	text-align: left;
+	vertical-align: top;
+	font-family:Tahoma;
+	font-size:9px;
+	color:#6C6C6C;
+}
+form
+{
+	margin:0px;
+}
+a {
+
+	text-decoration: underline;
+	color:#6C6C6C;
+}
+a.menu {
+
+	text-decoration: none;
+	color:#666666;
+}
+.green
+{
+	color:#4D8040;
+}
+a.green
+{
+	color:#4D8040;
+	text-decoration:underline;
+}
+.light
+{
+	color:#7C7D7B;
+}
+a.light
+{
+	color:#7C7D7B;
+	text-decoration:underline;
+}
+.red
+{
+	color:#A81D1D;
+}
+a.dark
+{
+	color:#646464;
+	text-decoration:underline;
+}
+.bot
+{
+	color:#898E98;
+}
+a.bot
+{
+	color:#898E98;
+	text-decoration:underline;
+}
+a.copy
+{
+	color:#9A9A9A;
+	text-decoration:none;
+}
+.t11
+{
+	font-size:11px;
+}

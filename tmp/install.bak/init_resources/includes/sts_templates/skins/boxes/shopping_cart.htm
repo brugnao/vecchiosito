@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Shopping Cart Box</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start cartbox //-->
+
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+metal:use-macro="boxes.htm/box_body">
+<span metal:fill-slot="box_contents" >
+<span id="it" tal:condition="no_products"  ><a href="shopping_cart.php">Shopping Cart</a></span>
+<span tal:condition="not:no_products" id="it">
+<a href="shopping_cart.php">Shopping Cart</a>
+</span>	<br />
+
+<a href="shopping_cart.php">
+<span tal:omit-tag="" tal:condition="products" >Articoli </span>
+<span tal:omit-tag="" tal:condition="products" tal:content="structure products" id="it">...numero  prodotti..</span></a>
+
+<br/>
+<a href="shopping_cart.php"><span tal:omit-tag="" tal:condition="products" >Totale <span tal:omit-tag="" tal:condition="products" tal:content="cart_total" id="it"> ... prodotti ...&egrave; vuoto</span> </span></a>
+</span>
+	  </span>
+<!-- end cartbox //-->
+</body>
+</html>

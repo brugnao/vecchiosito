@@ -1,0 +1,46 @@
+/* SHOPWINDOW classes */
+.shopwindow_table {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	width: 100%;
+	border-top:1px solid #aaaabb;
+	border-left:1px solid #aaaabb;
+}
+.shopwindow_row{
+	border-bottom:solid 1px #aaaabb;
+}
+.shopwindow_product{
+	/*border:1px solid black;*/
+}
+.shopwindow_cell{
+	padding:5px;
+	border-right:1px solid #aaaabb;
+	border-bottom:1px solid #aaaabb;
+}
+.shopwindow_productsPrice,.shopwindow_productsPriceSlashed{
+	white-space:nowrap;
+}
+.shopwindow_productsName{font-weight:bold; font-size:12px; color:#8E013B; text-decoration:none;}
+.shopwindow_productsPrice{
+	FONT-SIZE: 11px;
+	COLOR: #666666;
+	font-weight: bold;
+}
+
+.shopwindow_productsPriceSlashed{
+	FONT-SIZE: 14px;
+	COLOR: #999999;
+	font-weight: normal;
+	text-decoration: line-through;
+}
+.shopwindow_manufacturersName {
+	padding-left: 3px;
+}
+.shopwindow_cartButton,.shopwindow_productsDetails{
+	padding-left: 3px;
+	vertical-align: middle;
+	border:none;
+}
+.shopwindow_cartButton img{
+	padding-left: 3px;
+	padding-top: 10px;	
+}

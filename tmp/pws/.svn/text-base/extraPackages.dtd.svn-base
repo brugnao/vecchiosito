@@ -1,0 +1,35 @@
+<!-- pws_packages.dtd -->
+<!ELEMENT PWSPackages (PWSModule*)>
+<!ELEMENT PWSModule (install,title+,dirname,helppage,code*,description*,shortdescription*,shoplink*,checkInstallation*)>
+<!ATTLIST PWSModule 
+	type (module|module_payment|module_shipping|module_order_total|plugin_application|plugin_prices) "pws_module"
+	version CDATA #IMPLIED
+	isNew (yes|no) "no"
+>
+
+<!ELEMENT install EMPTY>
+<!ATTLIST install auto_install (no|yes) "no">
+<!ATTLIST install src CDATA "">
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title language CDATA "it">
+
+<!ELEMENT dirname (#PCDATA)>
+
+<!ELEMENT helppage (#PCDATA)>
+
+<!ELEMENT code (#PCDATA)>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description language CDATA "it">
+
+<!ELEMENT shortdescription (#PCDATA)>
+<!ATTLIST shortdescription language CDATA "it">
+
+<!ELEMENT shoplink (#PCDATA)>
+<!ATTLIST shoplink 
+	language CDATA "it"
+	href CDATA #REQUIRED
+>
+
+<!ELEMENT checkInstallation (#PCDATA)>

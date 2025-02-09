@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/oscommerce_pws/!svn/ver/4804/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices
+END
+language_pws_prices_tax_raee.php
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_tax_raee.php
+END
+language_pws_prices_purchase_price.php
+K 25
+svn:wc:ra_dav:version-url
+V 198
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_purchase_price.php
+END
+language_pws_prices_manufacturers.php
+K 25
+svn:wc:ra_dav:version-url
+V 197
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_manufacturers.php
+END
+language_pws_prices_customers_groups.php
+K 25
+svn:wc:ra_dav:version-url
+V 200
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_customers_groups.php
+END
+language_pws_prices_specials.php
+K 25
+svn:wc:ra_dav:version-url
+V 192
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_specials.php
+END
+language_pws_prices_categories.php
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_categories.php
+END
+language_pws_prices_quantities.php
+K 25
+svn:wc:ra_dav:version-url
+V 194
+/svn/oscommerce_pws/!svn/ver/4804/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/italian/pws/plugins/prices/language_pws_prices_quantities.php
+END

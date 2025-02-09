@@ -1,0 +1,85 @@
+#productDesc {
+	margin: 0px 0px 20px 0px;
+}
+#prodDescArea,#prodDescArea tr {
+	margin: 0px;
+	padding: 0px;
+}
+#prodDescArea .featureGroup {
+	border: 1px solid #cccccc;
+	margin: 4px;
+}
+#prodDescArea .head {
+	background-color: #cccccc;
+	padding: 2px 10px;
+}
+#prodDescArea .content {
+	padding: 0px 0px;
+}
+tr#prodDescMenu {
+	padding: 0px;
+	margin: 0px;
+}
+tr#prodDescMenu a, tr#prodDescMenu a:link, tr#prodDescMenu a:visited {
+	padding: 1px 1px;
+	text-decoration: none;
+}
+tr#prodDescMenu a:hover {
+	color: #666666;
+}
+tr#prodDescMenu td {
+	border-width: 1px 1px 1px 0px;
+	border-color: #aaaaaa;
+	border-style: solid;
+	background-color: #dddddd;
+}
+tr#prodDescMenu td.first {
+	border-left-width: 1px;
+}
+tr#prodDescMenu td {
+	border-width: 0px 0px 1px 0px;
+        padding: 2px;
+        border-bottom-color:#aaaaaa;
+        border-bottom-widht; 1px;
+}
+tr#prodDescMenu td.last {
+	border-width: 0px 0px 1px 0px;
+    padding: 2px;
+}
+tr#prodDescMenu td.selected {
+	background-color: #ffffff;
+	border-bottom-color:#FFFFFF;
+        padding: 2px;
+        border-right-color:#aaaaaa;
+        border-right-widht; 1px;
+
+}
+tr#prodDescContent td {
+	border-width: 0px 0px 0px 0px;
+	border-color: #c0c0c0;
+	border-style: solid;
+	padding: 2px;
+        width: 20%;
+}
+#prodDescArea table.desc th {
+	background-color: #cccccc;
+	font-size: 12px;
+	text-align: left;
+	padding: 2px 8px;
+}
+#prodDescArea table.desc td {
+	border: 0px;
+	padding: 0px;
+width: 550px;
+}
+#prodDescArea table.desc td.name {
+	width: 550px;
+	min-width: 450px;
+	background-color: #efefef;
+}
+#icecatDescArea {
+width: 600px;
+	height: 500px;
+	overflow: auto;
+	padding: 2px 8px;
+}

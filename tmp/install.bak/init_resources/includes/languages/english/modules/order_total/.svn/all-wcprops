@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total
+END
+ot_discount_coupon.php
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_discount_coupon.php
+END
+ot_tax.php
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_tax.php
+END
+ot_loworderfee.php
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_loworderfee.php
+END
+ot_subtotal.php
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_subtotal.php
+END
+ot_pws_tax_raee.php
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_pws_tax_raee.php
+END
+ot_shipping.php
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_shipping.php
+END
+ot_total.php
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_total.php
+END
+ot_cod_fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_cod_fee.php
+END
+ot_paypal_fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/order_total/ot_paypal_fee.php
+END

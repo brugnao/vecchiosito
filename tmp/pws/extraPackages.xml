@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<!DOCTYPE PWSPackages SYSTEM "./extraPackages.dtd">
+<PWSPackages>
+	<PWSModule isNew="yes" type="module" version="2.61">
+		<install auto_install="yes" src="admin/affiliate_install.php"/>
+		<title language="it">Modulo Programma Affiliati</title>
+		<dirname>pws_module_affiliates</dirname>
+		<description language="it"><![CDATA[
+			<h3>Modulo Programma Affiliati</h3>
+			Il modulo del programma Affiliati estende osCommerce PWS con le funzionalit&agrave; di un
+			programma per la gestione di affiliati al proprio sito di commercio elettronico.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Il modulo del programma Affiliati estende osCommerce PWS con le funzionalit&agrave; di un programma per la gestione di affiliati al proprio sito di commercio elettronico.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-affiliati-p-64.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=defined('MODULE_AFFILIATES_VERSION');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="yes" type="module" version="3.0">
+		<install/>
+		<title language="it">Discount Coupon Codes</title>
+		<dirname>pws_module_discount_coupon</dirname>
+		<description language="it"><![CDATA[
+			<h3>Discount Coupon Codes</h3>
+			Il modulo estende osCommerce PWS con le funzionalit&agrave; di un
+			programma per la gestione di codici di sconto distribuibili ai clienti per ottenere sconti.
+			<br/>I codici possono poi essere stampati su coupon, riviste, etc. etc.
+			<br/>Ogni codice pu&ograve; essere configurato escludendo alcuni prodotti, condizionando il funzionamento ad un ordine minimo (come quantit&agrave; o totale del carrello), etc. etc.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Creazione e gestione di coupon con codici di sconto da distribuire ai propri clienti.<br/> I codici verranno poi inseriti dai clienti in fase di checkout dell'ordine per ottenere lo sconto previsto.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-coupons-oscommerce-p-70.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/order_total/ot_discount_coupon.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module" version="3.0">
+		<install/>
+		<title language="it">Prodotti in arrivo</title>
+		<dirname>pws_module_prodotti_in_arrivo</dirname>
+		<description language="it"><![CDATA[
+			<h3>Prodotti in arrivo</h3>
+			Consente di gestire i prodotti in arrivo dai fornitori sulla base 
+			di un tracciato record csv concordato
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Consente di gestire i prodotti in arrivo dai fornitori sulla base 
+			di un tracciato record csv concordato
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=file_exists(DIR_FS_CATALOG.'temp/incomings.csv');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Pagamento tramite IWSmile</title>
+		<dirname>pws_module_payment_iwsmile</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite IWSmile</h3>
+			Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario IWSmile
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario IWSmile.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-iwsmile-oscommerce-p-110.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/iwsmile.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Pagamento tramite Consorzio Triveneto</title>
+		<dirname>pws_module_payment_ctriv</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite Consorzio Triveneto</h3>
+			Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario Consorzio Triveneto
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario Consorzio Triveneto.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-pagamento-consorzio-triveneto-payment-gateway-p-54.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/ctriv.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Pagamento tramite BankPass</title>
+		<dirname>pws_module_payment_bankpass</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite BankPass</h3>
+			Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario BankPass
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario BankPass.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/bankpass.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Pagamento tramite Numera Payment Gateway</title>
+		<dirname>pws_module_payment_numera</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite Numera Payment Gateway</h3>
+			Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario BankPass
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo di pagamento permette agli utenti di pagare tramite carta di credito con Numera Payment Gateway.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/numera.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	<PWSModule isNew="yes" type="module_payment" version="0.7">
+		<install/>
+		<title language="it">Pagamento tramite PAYPAL Express Checkout</title>
+		<dirname>pws_module_payment_ppec</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite PAYPAL Express Checkout</h3>
+			Questo modulo di pagamento permette agli utenti di acquistare sul sito senza registrarsi.
+			<br/>I dati del cliente vengono forniti direttamente dal server di PayPal.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo modulo di pagamento permette agli utenti di acquistare sul sito senza registrarsi tramite il loro account PayPal.
+			<br/>I dati del cliente vengono forniti direttamente dal server di PayPal.
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-paypal-express-checkout-oscommerce-p-347.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/ppec.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Pagamento tramite Banca Raiffeisen</title>
+		<dirname>pws_module_payment_raiffeisen_vpos2</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite Banca Raiffeisen</h3>
+			Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario Raiffeisen.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo di pagamento permette agli utenti di pagare tramite il loro conto bancario Raiffeisen.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-pagamento-raiffeisen-vpos-oscommerce-p-111.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/raiffeisen.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="yes" type="module_payment" version="1.0">
+		<install />
+		<title language="it">Pagamento tramite e-gipsy</title>
+		<dirname>pws_module_payment_egipsy</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite e-gipsy</h3>
+			Questo modulo di pagamento permette agli utenti di effettuare pagamenti attraverso e-gipsy.
+		]]></description>		
+		<shoplink href="http://www.modulioscommerce.com/">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/egipsy.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="no" type="module" version="1.01">
+		<install auto_install="yes" src="admin/db_patch_all.php"/>
+		<title language="yes">Vetrina in Flash</title>
+		<dirname>pws_module_shopwindow_flash</dirname>
+		<description language="it"><![CDATA[
+			<h3>Vetrina di una selezione dei prodotti nella Home Page</h3>
+			Questo modulo permette di visualizzare nella home page una selezione di prodotti definiti dal lato amministrazione.
+			<br/>La vetrina può essere visualizzata sia in formato HTML che come "filmato" in Flash; in questo caso pu&ograve; quindi contenere animazioni.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo permette di visualizzare nella home page una selezione di prodotti definiti dal lato amministrazione.
+			<br/>La vetrina consiste in un "filmato" in Flash, e pu&ograve; quindi contenere animazioni.
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/product_shopwindow_flash.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="no" type="module" version="1.01">
+		<install auto_install="yes" src="admin/db_patch_all.php"/>
+		<title language="it">Vetrina in HTML</title>
+		<dirname>pws_module_shopwindow_html</dirname>
+		<description language="it"><![CDATA[
+			<h3>Vetrina di una selezione dei prodotti nella Home Page</h3>
+			Questo modulo permette di visualizzare nella home page una selezione di prodotti definiti dal lato amministrazione.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo permette di visualizzare nella home page una selezione di prodotti definiti dal lato amministrazione.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-vetrina-html-p-141.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/product_shopwindow.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.02">
+		<install/>
+		<title language="it">Immagini Addizionali dei Prodotti</title>
+		<dirname>pws_plugin_application_additional_images</dirname>
+		<description language="it"><![CDATA[
+			<h3>Immagini Aggiuntive per prodotti</h3>
+			Installando questo modulo, sar&agrave; possibile inserire pi&ugrave; immagini per ogni prodotto.
+			<br/>Dal lato utente, le immagini aggiuntive vengono visualizzate nella scheda prodotto.
+			<br/>La galleria delle immagini nella scheda prodotto del lato utente &egrave; implementata in HTML
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Installando questo modulo, sar&agrave; possibile inserire pi&ugrave; immagini per ogni prodotto.
+		<br/>Dal lato utente, le immagini aggiuntive vengono visualizzate nella scheda prodotto.
+		<br/>La galleria delle immagini nella scheda prodotto del lato utente &egrave; implementata in HTML.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/immagini-multiple-prodotti-p-345.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_products_images.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.00">
+		<install/>
+		<title language="it">Controllo sul traffico generato dai motori di ricerca</title>
+		<dirname>pws_plugin_application_traffic_report</dirname>
+		<description language="it"><![CDATA[
+			<h3>PWS Traffic Report</h3>
+			Installando questo modulo, sar&agrave; possibile controllare il numero di visite provenienti dai motori di ricerca, il numero di clicks, il numero di compere "impulse buy", ed in generale i guadagni ed i contatti generati dai motori di ricerca (Trovaprezzi, Kelkoo, etc etc.)
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Installando questo modulo, sar&agrave; possibile controllare il numero di visite provenienti dai motori di ricerca, il numero di clicks, il numero di compere "impulse buy", ed in generale i guadagni ed i contatti generati dai motori di ricerca (Trovaprezzi, Kelkoo, etc etc.)
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_traffic_report.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.02">
+		<install/>
+		<title language="it">Immagini Addizionali dei Prodotti con Galleria in Flash</title>
+		<dirname>pws_plugin_application_additional_images_flash</dirname>
+		<description language="it"><![CDATA[
+			<h3>Immagini Aggiuntive per prodotti</h3>
+			Installando questo modulo, sar&agrave; possibile inserire pi&ugrave; immagini per ogni prodotto.
+			<br/>Dal lato utente, le immagini aggiuntive vengono visualizzate nella scheda prodotto.
+			<br/>La galleria delle immagini nella scheda prodotto del lato utente &egrave; implementata con un componente Flash molto elegante e funzionale.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Installando questo modulo, sar&agrave; possibile inserire pi&ugrave; immagini per ogni prodotto.
+		<br/>Dal lato utente, le immagini aggiuntive vengono visualizzate nella scheda prodotto.
+		<br/>La galleria delle immagini nella scheda prodotto del lato utente &egrave; implementata con un componente Flash molto elegante e funzionale.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_products_images.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="no" type="plugin_application" version="1.02">
+		<install/>
+		<title language="it">Prodotti Correlati</title>
+		<dirname>pws_plugin_application_prodotti_correlati</dirname>
+		<description language="it"><![CDATA[
+			<h3>Prodotti Correlati</h3>
+			Questo modulo permette di selezionare per ogni prodotto una lista di prodotti correlati.
+			<br/>I prodotti correlati vengono poi visualizzati nella scheda prodotto.
+			<br/>Per ogni prodotto correlato &egrave; possibile selezionare la quantit&agrave; da aggiungere al carrello
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo modulo permette di selezionare per ogni prodotto una lista di prodotti correlati.
+			<br/>I prodotti correlati vengono poi visualizzati nella scheda prodotto.
+			<br/>Per ogni prodotto correlato &egrave; possibile selezionare la quantit&agrave; da aggiungere al carrello
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/prodotti-correlati-cross-selling-p-69.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_products_selector.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.02">
+		<install/>
+		<title language="it">Importazione delle immagini dei prodotti da URL esterni</title>
+		<dirname>pws_plugin_application_remote_images_download</dirname>
+		<description language="it"><![CDATA[
+			<h3>Importazione delle immagini dei prodotti da URL esterni</h3>
+			Installando questo modulo, le immagini del prodotto possono anche essere inserite come url (indirizzi ad immagini presenti nel web); in tal caso il sistema si occuperà automaticamente di trasferire l'immagine dall'indirizzo alla cartella immagini, per consentire poi la creazione dei thumbnails.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Installando questo modulo, le immagini del prodotto possono anche essere inserite come url (indirizzi ad immagini presenti nel web); in tal caso il sistema si occuperà automaticamente di trasferire l'immagine dall'indirizzo alla cartella immagini, per consentire poi la creazione dei thumbnails.
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS.'pws_download_remote_image.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="no" type="plugin_prices" version="1.22">
+		<install/>
+		<title language="it">Sconti per categorie</title>
+		<dirname>pws_plugin_prices_categories</dirname>
+		<description language="it"><![CDATA[
+			<h3>Sconti per categorie</h3>
+			Questo plugin prezzi permette di fissare una percentuale di sconto su ogni categoria.
+			<br/>Gli sconti applicati ad una categoria vengono diffusi anche alle sottocategorie, a meno che non venga specificato diversamente
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo plugin prezzi permette di fissare una percentuale di sconto su ogni categoria.
+			<br/>Gli sconti applicati ad una categoria vengono diffusi anche alle sottocategorie, a meno che non venga specificato diversamente
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_PRICES.'pws_prices_categories.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_prices" version="1.23">
+		<install/>
+		<title language="it">Gestione del ricarico sul prezzo d'acquisto</title>
+		<dirname>pws_plugin_prices_gestione_ricarico_prezzi</dirname>
+		<description language="it"><![CDATA[
+			<h3>Gestione del ricarico sul prezzo d'acquisto</h3>
+			Con questo plugin &egrave; possibile applicare una percentuale di ricarico ad ogni prodotto.
+			<br/>Viene definita una percentuale di ricarico standard che viene applicata a tutti i prodotti.
+			<br/>E' quindi possibile stabilire le percentuali di ricarico prodotto per prodotto, quando la percentuale di default non &egrave; quella voluta
+			<br/>Per facilitare la gestione dei ricarichi, &egrave; stata aggiunta una sezione apposita nella sezione Aggiornamento Veloce dal lato amministrazione.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Con questo plugin &egrave; possibile applicare una percentuale di ricarico ad ogni prodotto.
+			<br/>Viene definita una percentuale di ricarico standard che viene applicata a tutti i prodotti.
+			<br/>E' quindi possibile stabilire le percentuali di ricarico prodotto per prodotto, quando la percentuale di default non &egrave; quella voluta
+			<br/>Per facilitare la gestione dei ricarichi, &egrave; stata aggiunta una sezione apposita nella sezione Aggiornamento Veloce dal lato amministrazione.
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_PRICES.'pws_prices_purchase_price.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_prices" version="1.12">
+		<install/>
+		<title language="it">Sconti per produttori</title>
+		<dirname>pws_plugin_prices_manufacturers</dirname>
+		<description language="it"><![CDATA[
+			<h3>Sconti per produttori</h3>
+			Questo plugin prezzi permette di applicare uno sconto ad ogni produttore.
+			<br/>Tale sconto verr&agrave; poi applicato ad ogni prodotto del produttore
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo plugin prezzi permette di applicare uno sconto ad ogni produttore.
+			<br/>Tale sconto verr&agrave; poi applicato ad ogni prodotto del produttore
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_PRICES.'pws_prices_manufacturers.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="no" type="plugin_prices" version="1.21">
+		<install/>
+		<title language="it">Sconti per quantità</title>
+		<dirname>pws_plugin_prices_quantities</dirname>
+		<description language="it"><![CDATA[
+			<h3>Sconti per quantit&agrave;</h3>
+			Con questo plugin, &egrave; possibile creare per ogni prodotto un numero di 
+			intervalli di quantit&agrave; a cui attribuire una percentuale di sconto.
+			<br/>Per esempio: da 1 a 3 pezzi: 10%, da 4 a 6 pezzi: 15%, oltre i 6 pezzi 20%.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Con questo plugin, &egrave; possibile creare per ogni prodotto un numero di 
+			intervalli di quantit&agrave; a cui attribuire una percentuale di sconto.
+			<br/>Per esempio: da 1 a 3 pezzi: 10%, da 4 a 6 pezzi: 15%, oltre i 6 pezzi 20%.
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_PRICES.'pws_prices_quantities.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_prices" version="1.32">
+		<install/>
+		<title language="it">Eco-Contributi RAEE</title>
+		<dirname>pws_plugin_prices_tax_raee</dirname>
+		<description language="it"><![CDATA[
+			<h3>Eco-Contributi RAEE</h3>
+			Questo plugin prezzi, permette di inserire le categorie previste per l'eco-contributo RAEE,
+			attribuendo ad ognuna l'importo previsto per legge.
+			<br/>Ogni prodotto pu&ograve; quindi essere assegnato ad una categoria RAEE, e ,da quel momento,
+			il contributo associato ad esso, verr&agrave; gestito dalla sezione dedicata alla gestione delle
+			categorie RAEE.
+			<br/>Per sveltire l'attribuzione delle categorie RAEE, &egrave; stata ampliata la sezione
+			"Aggiornamento Veloce", per gestire simultaneamente pi&ugrave; prodotti ed attribure le categorie
+			RAEE contemporaneamente ai prodotti selezionati utilizzando i filtri di ricerca (categoria di appartenenza, gruppi clienti, etc.)
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo plugin prezzi, permette di inserire le categorie previste per l'eco-contributo RAEE,
+			attribuendo ad ognuna l'importo previsto per legge.
+			<br/>Ogni prodotto pu&ograve; quindi essere assegnato ad una categoria RAEE, e ,da quel momento,
+			il contributo associato ad esso, verr&agrave; gestito dalla sezione dedicata alla gestione delle
+			categorie RAEE.
+			<br/>Per sveltire l'attribuzione delle categorie RAEE, &egrave; stata ampliata la sezione
+			"Aggiornamento Veloce", per gestire simultaneamente pi&ugrave; prodotti ed attribure le categorie
+			RAEE contemporaneamente ai prodotti selezionati utilizzando i filtri di ricerca (categoria di appartenenza, gruppi clienti, etc.)
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_PRICES.'pws_prices_tax_raee.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Modulo pagamento SETEFI Moneta online</title>
+		<dirname>pws_module_payment_setefi</dirname>
+		<description language="it"><![CDATA[
+			<h3>Modulo pagamento SETEFI Moneta online</h3>
+			Modulo per l'integrazione con il POS VIRTUALE Setefi Banca Intesa. Il modulo &egrave; stato scritto dal nostro team seguendo le specifiche tecniche fornite direttamente da Banca Intesa.
+
+Il modulo viene fornito chiavi in mano, ovvero dopo aver collaudato le transazioni sull'ambiente di test e aver messo in produzione il modulo.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		odulo per l'integrazione con il POS VIRTUALE Setefi Banca Intesa. Il modulo &egrave; stato scritto dal nostro team seguendo le specifiche tecniche fornite direttamente da Banca Intesa.
+
+Il modulo viene fornito chiavi in mano, ovvero dopo aver collaudato le transazioni sull'ambiente di test e aver messo in produzione il modulo.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-pagamento-oscommerce-setefi-moneta-online-p-55.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/monetaonline.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea_multiprices/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Full con Listini Multipli + Plugin Ricarico su Prezzi di Acquisto</title>
+		<dirname>pws_module_danea_multiprices_ioncube</dirname>
+		<dirname>pws_plugin_prices_gestione_ricarico_prezzi</dirname>
+		<helppage>mod_danea_multiprices/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full con Listini Multipli</h3>
+					]]></description>
+		<shortdescription language="it"><![CDATA[
+		Danea Full + Plugin Ricarico su Prezzi di Acquisto<br/>
+		<br/>
+		Questo modulo è appositamente studiato per coloro che vogliono aggiornare automaticamente i listini su oscommerce direttamente dal software Danea easyfatt.
+		Il modulo consente infatti di poter gestire tutti i listini di oscommerce a partire dai prezzi di acquisto caricati su danea. Inoltre i listini destinati ai vari gruppi clienti su oscommerce vengono automaticamente ricavati dai listini esportati con Danea.
+		Partendo dal file Excel esportato da Danea Easyfatt, il modulo importa tutti i listini danea nel database oscommerce ovvero:<br/>
+		Prezzo Fornitore, Listino1, Listino2, Listino3 Assegnandoli ai gruppi clienti creati appositamente nell'amministrazione di oscommerce.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea_multiprices') && file_exists(DIR_FS_PWS_PLUGINS_PRICES.'pws_prices_purchase_price.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea_multiprices/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Full con Listini Multipli - Modulo Interazione</title>
+		<dirname>pws_module_danea_multiprices_ioncube</dirname>
+		<helppage>mod_danea_multiprices/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full con Listini Multipli</h3>
+					]]></description>
+		<shortdescription language="it"><![CDATA[
+		Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt.<br/>
+		Questa versione permette anche il caricamento degli articoli direttamente dal software easyfatt al proprio sito oscommerce.
+		In questa variante, vengono gestiti anche i listini multipli, che vengono associati ai gruppi clienti presenti.
+		Se installato il plugin prezzi per la gestione del prezzo di ricarico, infine, viene importato il prezzo del fornitore, e memorizzata la percentuale di ricarico applicata per raggiungere il prezzo di listino.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea_multiprices');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea_multiprices_demo/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Full con Listini Multipli (DEMO) - Modulo Interazione</title>
+		<dirname>pws_module_danea_multiprices_demo_ioncube</dirname>
+		<helppage>mod_danea_multiprices_demo/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full con Listini Multipli</h3>
+					]]></description>
+		<shortdescription language="it"><![CDATA[
+		Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt.<br/>
+		Questa versione permette anche il caricamento degli articoli direttamente dal software easyfatt al proprio sito oscommerce.
+		In questa variante, vengono gestiti anche i listini multipli, che vengono associati ai gruppi clienti presenti.
+		Se installato il plugin prezzi per la gestione del prezzo di ricarico, infine, viene importato il prezzo del fornitore, e memorizzata la percentuale di ricarico applicata per raggiungere il prezzo di listino.
+		<br/>
+		La versione demo permette l'esportazione di 10 ordini e l'importazione di 10 articoli.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea_multiprices_demo');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Full - Modulo Interazione</title>
+		<dirname>pws_module_danea_full_ioncube</dirname>
+		<helppage>mod_danea/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full</h3>
+			<P><FONT size=2>Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt. Oltre agli ordini questo modulo si compone anche di un modulo aggiuntivo per il caricamento degli&nbsp;articoli direttamente dal software easyfatt al proprio sito&nbsp;oscommerce.&nbsp;</FONT></P>
+<P><FONT size=2>Con un solo click è possibile esportare gli ordini effettuati dal sito oscommerce direttamente su Easyfatt per l'emissione delle relative fatture e documenti di trasporto. </FONT></P>
+<P><FONT size=2>Attraverso l'esportazione del catalogo easyfatt in formato Excel è possibile ricavare un tracciato record completo (CSV)&nbsp;che importa articoli, categorie, descrizioni, &nbsp;prezzi e quantità&nbsp;direttamente sul sito di commercio elettronico.</FONT></P>
+<P><FONT color=#ff3300 size=4><STRONG>ATTENZIONE: La funzionalità di carico degli articoli NON funziona con il menu Strumenti-&gt; Ecommerce -&gt; Aggiorna articoli, ma con il file generato dal menu File -&gt; Esporta -&gt; Articoli con MS Excel</STRONG></FONT></P>
+
+<P><FONT size=2>Ricordiamo tuttavia che esistono alcune limitazioni al caricamento degli articoli.</FONT></P>
+<P><FONT size=2>Easyfatt è essenzialmente un programma gestionale e come tale non è stato sviluppato (almeno per il momento) per gestire immagini, descrizioni in html e altri contenuti che sono specifici per il web. L'esportazione degli articoli di conseguenza risulterà piuttosto carente dal punto di vista grafico e le schede prodotto saranno molto sintetiche e poco descrittive. Il nostro modulo ovviamente consente il carico dei prodotti con relativi prezzi e quantità ma è necessario comunque rivedere le schede prodotto da un punto di vista grafico.</FONT></P>
+<P><FONT size=2>Il modulo di caricaemento dei listini consente quindi un rapido e comodo aggiornamento&nbsp;delle disponibilità e dei prezzi attraverso la funzione di esportazione in formato excel di easyfatt. </FONT></P>
+<P><FONT size=2>Nel caso in cui i prodotti caricati non siano presenti nel database di oscommerce, questi verranno importati con tutti i campi necessari a creare la scheda prodotto base (senza immagine e descrizione in html) ed eventualmente anche categoria e sottocategoria. Nel caso in cui invece i prodotti siano già presenti nel database, questi verranno aggiornati solo in termini di Nome prodotto, prezzo e quantità, per evitare di sovrascrivere immagini e descrizioni in html eventualmente caricate.</FONT></P><FONT size=2>
+<P><STRONG>Opzioni Prodotto</STRONG>: Easyfatt non gestisce le opzioni per i prodotti, quindi non è possibile gestire le opzioni di oscommerce (es. taglia, misura etc) direttamente da EasyFatt. Le opziomi dovranno essere gestite separatamente dall'amministrazione di oscommerce.</P>
+<P>&nbsp;<STRONG>Listini Multipli</STRONG>: Il caricamento degli articoli avviene solo con il listino 1, gli altri listini non vengono presi in considerazione in quanto non tutte le versioni di oscommerce sono compatibili con listini multipli (versioni non B2B).</P>
+<P>&nbsp;<STRONG>Fornitori: </STRONG>E' possibile scegliere se importare o meno i fornitori attraverso una chiave di configurazione. Per default l'importazione dei fornitori è disabilitata poichè vengono poi mostrati nella scheda prodotto. Per oscommerce infatti i fornitori sono essenzialmente le marche di appartenenza degli articoli (es. Sony, IBM, LG, Intel ...), mentre per easyfatt i fornitori sono le aziende da cui vengono acquistati gli articoli con relativo prezzo di acquisto (es. Ingram Micro, Esprinet ...)</P>
+
+<P><STRONG>Status dei prodotti post importazione</STRONG>: per la prima importazione, è possibile scegliere con il nostro modulo se impostare lo status di default a on (prodotto mostrato nella parte pubblica del sito) oppure ad off (il prodotto viene visalizzato solo in amministrazione). Per i successivi aggiornamenti del catalogo lo status non viene modificato</P>
+<P><STRONG>Giacenza:</STRONG> la disponibilità dei prodotti viene importata e aggiornata sulla base dei valori dei due campi "Gest. magazzino?" (deve essere impostato a SI) e "Q.tà giacenza".</P>
+<P>&nbsp;</P>
+<P><STRONG>Scarico degli ordini da oscommerce</STRONG></P>
+<P></FONT><FONT size=2>L'anagrafica del cliente viene importata automaticamente insieme all'ordine. Easyfatt si occuperà poi di informare l'utente se il cilente è già presente in archivio (attraverso il controllo sul numero di partita iva / codice fiscale) e quindi di associarne direttamente l'ordine, oppure se creare un nuovo cliente con i dati importati. </FONT></P>
+<P><FONT size=2>E' possibile inoltre selezionare solo gli ordini che si desidera importare attraverso una comoda finestra di dialogo. Gli ordini già importati vengono automaticamente esclusi dalla successiva importazione.</FONT></P>
+<P><FONT size=2>Uno strumento che può ridurre notevolmente i tempi di lavorazione ed evasione degli ordinie.</FONT></P>
+<P><STRONG>EasyFatt è uno dei migliori e più diffusi software gestionali e si distingue per la gradevolezza dell'interfaccia grafica e la semplicità di utilizzo.</STRONG></P>
+
+<P><FONT size=2><FONT size=3><STRONG>Per tutte le informazioni su EasyFatt consulta questo link</STRONG></FONT></FONT></P>
+<P><FONT size=2><A href="http://www.danea.it/software/easyfatt/" target=_blank><FONT size=4>http://www.danea.it/software/easyfatt/</FONT></A></FONT></p>
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt. Oltre agli ordini questo modulo si compone anche di un modulo aggiuntivo per il caricamento degli articoli direttamente dal software easyfatt al proprio sito oscommerce.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-oscommerce-fatturazione-danea-easyfatt-gestione-articoli-excel-p-109.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea_light/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Light - Modulo Interazione</title>
+		<dirname>pws_module_danea_light_ioncube</dirname>
+		<helppage>mod_danea_light/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full</h3>
+			<P><FONT size=2>Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt.</FONT></P>
+<P><FONT size=2>Con un solo click è possibile esportare gli ordini effettuati dal sito oscommerce direttamente su Easyfatt per l'emissione delle relative fatture e documenti di trasporto. </FONT></P>
+
+<P><STRONG>Scarico degli ordini da oscommerce</STRONG></P>
+<P></FONT><FONT size=2>L'anagrafica del cliente viene importata automaticamente insieme all'ordine. Easyfatt si occuperà poi di informare l'utente se il cilente è già presente in archivio (attraverso il controllo sul numero di partita iva / codice fiscale) e quindi di associarne direttamente l'ordine, oppure se creare un nuovo cliente con i dati importati. </FONT></P>
+<P><FONT size=2>E' possibile inoltre selezionare solo gli ordini che si desidera importare attraverso una comoda finestra di dialogo. Gli ordini già importati vengono automaticamente esclusi dalla successiva importazione.</FONT></P>
+<P><FONT size=2>Uno strumento che può ridurre notevolmente i tempi di lavorazione ed evasione degli ordinie.</FONT></P>
+<P><STRONG>EasyFatt è uno dei migliori e più diffusi software gestionali e si distingue per la gradevolezza dell'interfaccia grafica e la semplicità di utilizzo.</STRONG></P>
+
+<P><FONT size=2><FONT size=3><STRONG>Per tutte le informazioni su EasyFatt consulta questo link</STRONG></FONT></FONT></P>
+<P><FONT size=2><A href="http://www.danea.it/software/easyfatt/" target=_blank><FONT size=4>http://www.danea.it/software/easyfatt/</FONT></A></FONT></p>
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt. Oltre agli ordini questo modulo si compone anche di un modulo aggiuntivo per il caricamento degli articoli direttamente dal software easyfatt al proprio sito oscommerce.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-oscommerce-fatturazione-danea-easyfatt-gestione-articoli-excel-p-109.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea_light');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea_demo/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Full (DEMO) - Modulo Interazione</title>
+		<dirname>pws_module_danea_full_demo_ioncube</dirname>
+		<helppage>mod_danea_demo/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full (Demo)</h3>
+			<P><FONT size=2>Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt. Oltre agli ordini questo modulo si compone anche di un modulo aggiuntivo per il caricamento degli&nbsp;articoli direttamente dal software easyfatt al proprio sito&nbsp;oscommerce.&nbsp;</FONT></P>
+<P><FONT size=2>Con un solo click è possibile esportare gli ordini effettuati dal sito oscommerce direttamente su Easyfatt per l'emissione delle relative fatture e documenti di trasporto. </FONT></P>
+<P><FONT size=2>Attraverso l'esportazione del catalogo easyfatt in formato Excel è possibile ricavare un tracciato record completo (CSV)&nbsp;che importa articoli, categorie, descrizioni, &nbsp;prezzi e quantità&nbsp;direttamente sul sito di commercio elettronico.</FONT></P>
+<P><FONT color=#ff3300 size=4><STRONG>ATTENZIONE: La funzionalità di carico degli articoli NON funziona con il menu Strumenti-&gt; Ecommerce -&gt; Aggiorna articoli, ma con il file generato dal menu File -&gt; Esporta -&gt; Articoli con MS Excel</STRONG></FONT></P>
+
+<P><FONT size=2>Ricordiamo tuttavia che esistono alcune limitazioni al caricamento degli articoli.</FONT></P>
+<P><FONT size=2>Easyfatt è essenzialmente un programma gestionale e come tale non è stato sviluppato (almeno per il momento) per gestire immagini, descrizioni in html e altri contenuti che sono specifici per il web. L'esportazione degli articoli di conseguenza risulterà piuttosto carente dal punto di vista grafico e le schede prodotto saranno molto sintetiche e poco descrittive. Il nostro modulo ovviamente consente il carico dei prodotti con relativi prezzi e quantità ma è necessario comunque rivedere le schede prodotto da un punto di vista grafico.</FONT></P>
+<P><FONT size=2>Il modulo di caricaemento dei listini consente quindi un rapido e comodo aggiornamento&nbsp;delle disponibilità e dei prezzi attraverso la funzione di esportazione in formato excel di easyfatt. </FONT></P>
+<P><FONT size=2>Nel caso in cui i prodotti caricati non siano presenti nel database di oscommerce, questi verranno importati con tutti i campi necessari a creare la scheda prodotto base (senza immagine e descrizione in html) ed eventualmente anche categoria e sottocategoria. Nel caso in cui invece i prodotti siano già presenti nel database, questi verranno aggiornati solo in termini di Nome prodotto, prezzo e quantità, per evitare di sovrascrivere immagini e descrizioni in html eventualmente caricate.</FONT></P><FONT size=2>
+<P><STRONG>Opzioni Prodotto</STRONG>: Easyfatt non gestisce le opzioni per i prodotti, quindi non è possibile gestire le opzioni di oscommerce (es. taglia, misura etc) direttamente da EasyFatt. Le opziomi dovranno essere gestite separatamente dall'amministrazione di oscommerce.</P>
+<P>&nbsp;<STRONG>Listini Multipli</STRONG>: Il caricamento degli articoli avviene solo con il listino 1, gli altri listini non vengono presi in considerazione in quanto non tutte le versioni di oscommerce sono compatibili con listini multipli (versioni non B2B).</P>
+<P>&nbsp;<STRONG>Fornitori: </STRONG>E' possibile scegliere se importare o meno i fornitori attraverso una chiave di configurazione. Per default l'importazione dei fornitori è disabilitata poichè vengono poi mostrati nella scheda prodotto. Per oscommerce infatti i fornitori sono essenzialmente le marche di appartenenza degli articoli (es. Sony, IBM, LG, Intel ...), mentre per easyfatt i fornitori sono le aziende da cui vengono acquistati gli articoli con relativo prezzo di acquisto (es. Ingram Micro, Esprinet ...)</P>
+
+<P><STRONG>Status dei prodotti post importazione</STRONG>: per la prima importazione, è possibile scegliere con il nostro modulo se impostare lo status di default a on (prodotto mostrato nella parte pubblica del sito) oppure ad off (il prodotto viene visalizzato solo in amministrazione). Per i successivi aggiornamenti del catalogo lo status non viene modificato</P>
+<P><STRONG>Giacenza:</STRONG> la disponibilità dei prodotti viene importata e aggiornata sulla base dei valori dei due campi "Gest. magazzino?" (deve essere impostato a SI) e "Q.tà giacenza".</P>
+<P>&nbsp;</P>
+<P><STRONG>Scarico degli ordini da oscommerce</STRONG></P>
+<P></FONT><FONT size=2>L'anagrafica del cliente viene importata automaticamente insieme all'ordine. Easyfatt si occuperà poi di informare l'utente se il cilente è già presente in archivio (attraverso il controllo sul numero di partita iva / codice fiscale) e quindi di associarne direttamente l'ordine, oppure se creare un nuovo cliente con i dati importati. </FONT></P>
+<P><FONT size=2>E' possibile inoltre selezionare solo gli ordini che si desidera importare attraverso una comoda finestra di dialogo. Gli ordini già importati vengono automaticamente esclusi dalla successiva importazione.</FONT></P>
+<P><FONT size=2>Uno strumento che può ridurre notevolmente i tempi di lavorazione ed evasione degli ordinie.</FONT></P>
+<P><STRONG>EasyFatt è uno dei migliori e più diffusi software gestionali e si distingue per la gradevolezza dell'interfaccia grafica e la semplicità di utilizzo.</STRONG></P>
+
+<P><FONT size=2><FONT size=3><STRONG>Per tutte le informazioni su EasyFatt consulta questo link</STRONG></FONT></FONT></P>
+<P><FONT size=2><A href="http://www.danea.it/software/easyfatt/" target=_blank><FONT size=4>http://www.danea.it/software/easyfatt/</FONT></A></FONT></p>
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		(Versione Demo) Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt. Oltre agli ordini questo modulo si compone anche di un modulo aggiuntivo per il caricamento degli articoli direttamente dal software easyfatt al proprio sito oscommerce.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-oscommerce-fatturazione-danea-easyfatt-gestione-articoli-excel-p-109.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea_demo');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="module" version="1.3">
+		<install auto_install="yes" src="mod_danea_light_demo/danea_setup.php"/>
+		<title language="it">Danea EasyFatt Light (DEMO) - Modulo Interazione</title>
+		<dirname>pws_module_danea_light_demo_ioncube</dirname>
+		<helppage>mod_danea_light_demo/danea_instructions.php</helppage>
+		<description language="it"><![CDATA[
+			<h3>Danea EasyFatt Full</h3>
+			<P><FONT size=2>Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt.</FONT></P>
+<P><FONT size=2>Con un solo click è possibile esportare gli ordini effettuati dal sito oscommerce direttamente su Easyfatt per l'emissione delle relative fatture e documenti di trasporto. </FONT></P>
+
+<P><STRONG>Scarico degli ordini da oscommerce</STRONG></P>
+<P></FONT><FONT size=2>L'anagrafica del cliente viene importata automaticamente insieme all'ordine. Easyfatt si occuperà poi di informare l'utente se il cilente è già presente in archivio (attraverso il controllo sul numero di partita iva / codice fiscale) e quindi di associarne direttamente l'ordine, oppure se creare un nuovo cliente con i dati importati. </FONT></P>
+<P><FONT size=2>E' possibile inoltre selezionare solo gli ordini che si desidera importare attraverso una comoda finestra di dialogo. Gli ordini già importati vengono automaticamente esclusi dalla successiva importazione.</FONT></P>
+<P><FONT size=2>Uno strumento che può ridurre notevolmente i tempi di lavorazione ed evasione degli ordinie.</FONT></P>
+<P><STRONG>EasyFatt è uno dei migliori e più diffusi software gestionali e si distingue per la gradevolezza dell'interfaccia grafica e la semplicità di utilizzo.</STRONG></P>
+
+<P><FONT size=2><FONT size=3><STRONG>Per tutte le informazioni su EasyFatt consulta questo link</STRONG></FONT></FONT></P>
+<P><FONT size=2><A href="http://www.danea.it/software/easyfatt/" target=_blank><FONT size=4>http://www.danea.it/software/easyfatt/</FONT></A></FONT></p>
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Il modulo di integrazione con il software Danea Easyfatt Full consente di gestire i propri ordini oscommerce attraverso il software Easyfatt. Oltre agli ordini questo modulo si compone anche di un modulo aggiuntivo per il caricamento degli articoli direttamente dal software easyfatt al proprio sito oscommerce.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-oscommerce-fatturazione-danea-easyfatt-gestione-articoli-excel-p-109.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=is_dir(DIR_FS_CATALOG.'mod_danea_light_demo');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.00">
+		<install/>
+		<title language="it">Menu a scomparsa per le categorie</title>
+		<dirname>pws_plugin_application_dropdownmenu</dirname>
+		<description language="it"><![CDATA[
+			<h3>Menu a scomparsa per le categorie</h3>
+			Questo plugin sostituisce il menu delle categorie con un menu interattivo a scomparsa.
+			Sono presenti due stili predefiniti, ed &egrave; possibile personalizzarne un terzo.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo plugin sostituisce il menu delle categorie con un menu interattivo a scomparsa.
+			Sono presenti due stili predefiniti, ed &egrave; possibile personalizzarne un terzo.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/menu-categorie-dinamico-dhtml-p-348.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_dropdownmenu.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	<PWSModule isNew="yes" type="plugin_application" version="1.00">
+		<install/>
+		<title language="it">Google Sitemap Generator</title>
+		<dirname>pws_module_google_sitemap</dirname>
+		<description language="it"><![CDATA[
+			<h3>Google Sitemap Generator</h3>
+			Il google sitemap generator è un modulo che consente di generare il sitemap in versione XML 
+			come da specifiche tecniche fornite da google e in maniera completamente automatica.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Serve principalmente ad indicizzare pagine del proprio sito che sarebbero altrimenti indicizzate 
+			con notevole ritardo o forse addirittura escluse dall'indicizzazione. 
+			Inoltre il sitemap consente di acquisire un page rank maggiore per il proprio sito e le varie pagine 
+			che lo compongono e fornisce a google le informazioni necessarie per far apparire al meglio il vostro 
+			sito nelle ricerche con varie sottopagine linkate direttamente. Anche l'immagine aziendale ne guadagna, 
+			mostrando un sito che si conforma alle ultime regole sull'ottimizzazione rispetto ai motori di ricerca.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/google-sitemap-generator-oscommerce-p-346.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'admin/google_sitemap.php');
+		]]></checkInstallation>
+	</PWSModule>
+	
+	<PWSModule isNew="yes" type="module_payment" version="1.01">
+		<install/>
+		<title language="it">Pagamento tramite finanziamento Agos</title>
+		<dirname>pws_module_payment_agos</dirname>
+		<description language="it"><![CDATA[
+			<h3>Pagamento tramite finanziamento Agos</h3>
+			Questo modulo di pagamento permette agli utenti di pagare tramite un finanziamento 
+			approvato dal server Agos
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Questo modulo di pagamento permette agli utenti di pagare tramite un finanziamento 
+		approvato dal server Agos
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-agos-oscommerce-p-48.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_CATALOG.'includes/modules/payment/agos.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.00">
+		<install always="yes" src=""/>
+		<title language="it">Controllo Accesso per Gruppi Clienti</title>
+		<dirname>pws_plugin_application_access_control</dirname>
+		<description language="it"><![CDATA[
+			<h3>PWS Access Control</h3>
+			Installando questo modulo  sar&agrave; possibile controllare l'accesso al sito per singolo gruppo cliente su ogni sezione del front end. E' particolarmente indicato per i siti totalmente dedicati al B2B, poichè è possibile chiduere completamente la parte pubblica impedendo al visitatore di vedere prodotti e prezzi. 
+			Solo i clienti che sono stati preventivamente autorizzati dall'admin potranno accedere al catalogo ed avranno quindi la possibilità di acquistare.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+		Controllo di accesso per Gruppi Clienti. Con questo modulo si ha il controllo completo sull'accesso nella parte pubblica del sito.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_plugin_application_access_control');
+		]]></checkInstallation>
+	</PWSModule>
+
+	<PWSModule isNew="yes" type="module_shipping" version="1.00">
+		<install always="yes" src=""/>
+		<title language="it">Modulo di integrazione con TNT Express Shipper</title>
+		<dirname>pws_module_shipping_tnt_expressshipper</dirname>
+		<description language="it"><![CDATA[
+			<h3>Modulo di Spedizione per TNT Express Shipper</h3>
+			Il Passepartout per ordini telefonici è un modulo che consente di impostare una master password direttamente dalla configurazione dell'admin per accedere a qualsiasi account utente semplicemente inserendo l'email del cliente e la master password. In questo modo è possibile aiutare il cliente a selezionare il prodotto adatto alle sue esigenze, seguirlo in tutte le fasi dell'ordine e completare la procedura d'ordine come se si stesse operando dal suo computer.
+			Il Passepartout per ordini telefonici ha come unico requisito che il cliente sia già registrato sul sito.
+			Questo modulo è particolarmente indicato per chi ha un elevato numero di contatti telefonci, per chi gestisce direttamente gli ordni dei clienti, o anche per chi ha un elevato numero di articoli per cui il cliente spesso risulta disorientato nella scelta del prodotto più adatto. Entrando nel sito esattamente come se fosse il cliente, l'admin ha la possibilità di completare velocemente gli ordini e di far arrivare le classiche mail di notifica al cliente con il riepilogo degli articoli ordinati, il metodo di consegna e di pagamento.
+			]]></description>
+		
+		<shortdescription language="it"><![CDATA[
+			Il nostro modulo consente di creare il file csv per importare le anagrafiche degli ordini da oscommerce a ExpressManager Con un solo click è possibile esportare il file degli ordini in partenza e importarli poi nel software TNT, con un enorme risparmio di tempo e di errori.
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-integrazione-spedizioni-per-tnt-express-shipper-p-361.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=file_exists(DIR_FS_ADMIN.'express_shipper.php');
+		]]></checkInstallation>
+	</PWSModule>
+	
+	<PWSModule isNew="yes" type="module_shipping" version="1.00">
+		<install always="yes" src=""/>
+		<title language="it">Modulo di integrazione con corriere MAGDI</title>
+		<dirname>pws_module_shipping_magdi</dirname>
+		<description language="it"><![CDATA[
+			<h3>Modulo di Spedizione per corriere MAGDI</h3>
+			Il modulo consente con un solo click di esportare gli ordini in partenza in formato ASCII secondo le specifiche MAG-DI			]]></description>
+		
+		<shortdescription language="it"><![CDATA[
+		Il modulo consente con un solo click di esportare gli ordini in partenza in formato ASCII secondo le specifiche MAG-DI	
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-integrazione-spedizioni-per-gruppo-magdi-p-355.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+			$installed=file_exists(DIR_FS_ADMIN.'magdi.php');
+		]]></checkInstallation>
+	</PWSModule>	
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.00">
+		<install always="yes" src=""/>
+		<title language="it">Master Password - Passepartout per ordini telefonici</title>
+		<dirname>pws_module_master_password</dirname>
+		<description language="it"><![CDATA[
+			<h3>Master Password - Passepartout per ordini telefonici</h3>
+			Il Passepartout per ordini telefonici è un modulo che consente di impostare una master password direttamente dalla configurazione dell'admin per accedere a qualsiasi account utente semplicemente inserendo l'email del cliente e la master password. In questo modo è possibile aiutare il cliente a selezionare il prodotto adatto alle sue esigenze, seguirlo in tutte le fasi dell'ordine e completare la procedura d'ordine come se si stesse operando dal suo computer.
+			Il Passepartout per ordini telefonici ha come unico requisito che il cliente sia già registrato sul sito.
+			Questo modulo è particolarmente indicato per chi ha un elevato numero di contatti telefonci, per chi gestisce direttamente gli ordni dei clienti, o anche per chi ha un elevato numero di articoli per cui il cliente spesso risulta disorientato nella scelta del prodotto più adatto. Entrando nel sito esattamente come se fosse il cliente, l'admin ha la possibilità di completare velocemente gli ordini e di far arrivare le classiche mail di notifica al cliente con il riepilogo degli articoli ordinati, il metodo di consegna e di pagamento.
+			]]></description>
+		
+		<shortdescription language="it"><![CDATA[
+Il Passepartout per ordini telefonici è un modulo che consente di impostare una master password direttamente dalla configurazione dell'admin per accedere a qualsiasi account utente semplicemente inserendo l'email del cliente e la master password. In questo modo è possibile aiutare il cliente a selezionare il prodotto adatto alle sue esigenze, seguirlo in tutte le fasi dell'ordine e completare la procedura d'ordine come se si stesse operando dal suo computer.
+Il Passepartout per ordini telefonici ha come unico requisito che il cliente sia già registrato sul sito.
+Questo modulo è particolarmente indicato per chi ha un elevato numero di contatti telefonci, per chi gestisce direttamente gli ordni dei clienti, o anche per chi ha un elevato numero di articoli per cui il cliente spesso risulta disorientato nella scelta del prodotto più adatto. Entrando nel sito esattamente come se fosse il cliente, l'admin ha la possibilità di completare velocemente gli ordini e di far arrivare le classiche mail di notifica al cliente con il riepilogo degli articoli ordinati, il metodo di consegna e di pagamento.</shortdescription>
+			]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/passepartout-ordini-telefonici-p-350.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+$installed=file_exists(DIR_FS_ADMIN.'mp.php');
+		]]></checkInstallation>
+	</PWSModule>
+	
+	<PWSModule isNew="yes" type="plugin_application" version="1.01">
+		<install/>
+		<title language="it">Controllo sull'accesso al sito</title>
+		<dirname>pws_plugin_application_access_control</dirname>
+		<description language="it"><![CDATA[
+			<h3>PWS Access Control</h3>
+			Questo modulo permette di configurare l'accesso a tutte le pagine del sito.
+			L'accesso viene configurato per ogni singolo gruppo cliente.
+			Pu&ograve; essere definita una pagina su cui redirigere il traffico quando viene 
+			richiesta una pagina il cui accesso &egrave; precluso ad un certo gruppo clienti,
+			e si pu&ograve; anche definire un template da utilizzare quando l'utente non &egrave; 
+			loggato.
+			Il gruppo clienti finale viene attribuito anche agli utenti non registrati n&egrave; loggati.
+			In questo modo &egrave; dunque possibile controllare l'accesso di utenti sconosciuti, permettendo
+			loro, ad esempio, di visitare solamente la pagina principale, eventualmente le pagine di informazioni
+			e la pagina di accesso, e registrazione al sito (&egrave; consigliabile lasciare accessibile
+			anche la pagina tramite la quale si inviano domande all'amministratore del sito).
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo modulo permette di configurare l'accesso a tutte le pagine del sito.
+			L'accesso viene configurato per ogni singolo gruppo cliente.
+			Pu&ograve; essere definita una pagina su cui redirigere il traffico quando viene 
+			richiesta una pagina il cui accesso &egrave; precluso ad un certo gruppo clienti,
+			e si pu&ograve; anche definire un template da utilizzare quando l'utente non &egrave; 
+			loggato.
+			Il gruppo clienti finale viene attribuito anche agli utenti non registrati n&egrave; loggati.
+			In questo modo &egrave; dunque possibile controllare l'accesso di utenti sconosciuti, permettendo
+			loro, ad esempio, di visitare solamente la pagina principale, eventualmente le pagine di informazioni
+			e la pagina di accesso, e registrazione al sito (&egrave; consigliabile lasciare accessibile
+			anche la pagina tramite la quale si inviano domande all'amministratore del sito).
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+				$installed=file_exists(DIR_FS_PWS_PLUGINS_APPLICATION.'pws_access_control.php');
+		]]></checkInstallation>
+	</PWSModule>
+	
+		<PWSModule isNew="yes" type="plugin_application" version="1.01">
+		<install/>
+		<title language="it">Export Per Turbolister2</title>
+		<dirname>pws_module_turbolister2_export</dirname>
+		<description language="it"><![CDATA[
+			<h3>Export Per Turbolister2</h3>
+			Questo modulo permette di esportare i prodotti del proprio catalogo oscommerce nel formato CSV compatibile con TurboLister2 di Ebay.
+			Il modulo consente di esportare selettivamente i prodotti per categoria, questo perchè non è possibile assegnare preventivamente le 
+			categorie di ebay ai prodotti su oscommerce.
+			Il modulo è di semplice utilizzo: si selezionano le categorie che interessa esportare e si clicca sul pulsante Export per saricare il file CSV che 
+			poi andrà reimportato in Turbolister.
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+			Questo modulo permette di esportare i prodotti del proprio catalogo oscommerce nel formato CSV compatibile con TurboLister2 di Ebay.
+			Il modulo consente di esportare selettivamente i prodotti per categoria, questo perchè non è possibile assegnare preventivamente le 
+			categorie di ebay ai prodotti su oscommerce.
+			Il modulo è di semplice utilizzo: si selezionano le categorie che interessa esportare e si clicca sul pulsante Export per saricare il file CSV che 
+			poi andrà reimportato in Turbolister.
+		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+				$installed=file_exists(DIR_FS_ADMIN.'turbolister2_export.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+		<PWSModule isNew="yes" type="plugin_application" version="1.01">
+		<install/>
+		<title language="it">Integrazione IceCat</title>
+		<dirname>pws_module_icecat</dirname>
+		<description language="it"><![CDATA[
+			<h3>Integrazine IceCat</h3>
+			Il modulo di integrazione Open IceCat consente di scaricare direttamente dal sito ICEcat le specifiche tecniche e le immagini di ogni singolo prodotto attraverso il relativo VPN (Vendor Part Number) .
+			Il modulo consente di abbassare drammaticamente i tempi di compilazione e di inserire specifiche tecniche molto dettagliate e qualitativamente eccellenti nella scheda prodotto. 
+		]]></description>
+		<shortdescription language="it"><![CDATA[
+ 		Il funzionamento del modulo è semplicissimo, basta entrare nel form di inserimento/aggiornamento  prodotto in admin, selezionare dal menu a tendina il produttore e inserire il VPN del prodotto nell'apposito campo. 
+ 		Entro qualche frazione di secondo vedrete la scheda del prodotto popolarsi delle specifiche tecniche e delle varie immagini. Se la descrizione del prodotto è già stata inserita, le specifiche tecniche verranno visualizzate 
+ 		nella sezione pubblica in un tab separato, altrimenti saranno mostrate di default all'apertura della pagina relativa al prodotto. Le descrizione eventualmente già inserite quindi non verranno sovrascritte.		
+ 		]]></shortdescription>
+		<shoplink href="http://www.modulioscommerce.com/modulo-integrazione-open-icecat-gratis-con-multi-image-p-368.html">Maggiori dettagli</shoplink>
+		<checkInstallation><![CDATA[
+				$installed=file_exists(DIR_FS_ADMIN.'icecat_setup.php');
+		]]></checkInstallation>
+	</PWSModule>
+
+
+</PWSPackages>

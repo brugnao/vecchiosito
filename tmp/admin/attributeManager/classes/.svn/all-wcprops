@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/oscommerce_pws/!svn/ver/4645/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes
+END
+attributeManagerAtomic.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes/attributeManagerAtomic.class.php
+END
+attributeManager.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/oscommerce_pws/!svn/ver/4642/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes/attributeManager.class.php
+END
+attributeManagerInstant.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes/attributeManagerInstant.class.php
+END
+stopDirectAccess.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes/stopDirectAccess.class.php
+END
+amDB.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes/amDB.class.php
+END
+attributeManagerConfig.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/oscommerce_pws/!svn/ver/4645/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/classes/attributeManagerConfig.class.php
+END

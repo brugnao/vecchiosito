@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL
+END
+Namespace.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Namespace.php
+END
+GetTextTranslator.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/GetTextTranslator.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Exception.php
+END
+Source.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Source.php
+END
+FileSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/FileSource.php
+END
+TalesRegistry.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/TalesRegistry.php
+END
+Trigger.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Trigger.php
+END
+Tales.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Tales.php
+END
+CommentFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/CommentFilter.php
+END
+TranslationService.php
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/TranslationService.php
+END
+SourceResolver.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/SourceResolver.php
+END
+RepeatController.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/RepeatController.php
+END
+Context.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Context.php
+END
+Filter.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Filter.php
+END
+StringSource.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/StringSource.php
+END

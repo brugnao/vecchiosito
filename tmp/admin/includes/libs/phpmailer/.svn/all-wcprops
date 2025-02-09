@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/libs/phpmailer
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/libs/phpmailer/LICENSE.txt
+END
+ChangeLog.txt
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/libs/phpmailer/ChangeLog.txt
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/libs/phpmailer/README.txt
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/libs/phpmailer/class.phpmailer.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/libs/phpmailer/class.smtp.php
+END

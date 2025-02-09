@@ -1,0 +1,36 @@
+/* PWS_PRODUCTS_IMAGES STYLES sezione front-end*/
+
+/*
+  Sezione dello slideshow html delle immagini aggiuntive
+*/
+.pwsAdditionalImageContainer{
+/*	width:200%;
+	max-width:1000px;
+*/
+}#pwsAdditionalImagesSlideshow{
+/*	height:".$thumbheight."px;
+	min-height:".$thumbheight."px;
+	max-height:".$thumbheight."px;
+	width:100%;
+	min-width:100%;
+	max-width:100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+	overflow-x:scroll;
+	*/
+	border-top:1px dotted navy;
+	border-bottom:1px dotted navy;
+	width:100%;
+	min-width:100%;
+	max-width:100%;
+	text-align:center;
+}
+
+/*
+  Classe usata per ogni singolo thumbnail delle immagini aggiuntive
+*/
+.pwsAdditionalImageThumbnail{
+	float:left;
+	margin:5px 10px 5px 10px;
+	border:1px dotted gray;
+}

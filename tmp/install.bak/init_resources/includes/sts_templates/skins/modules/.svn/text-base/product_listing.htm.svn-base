@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<table tal:condition="top_page_links_show" border="0" width="100%" cellspacing="0" cellpadding="2">
+  <tr>
+    <td class="smallText" tal:content="structure number_of_products">..qui compare il numero di prodotti visualizzati..</td>
+    <td class="smallText" align="right" tal:content="structure top_page_links">Pagina 1 2 3</td>
+  </tr>
+</table>
+<span tal:condition="no_products" tal:content="structure text_no_products">non ci sono prodotti da visualizzare</span>
+<table tal:condition="not:no_products" border="0" width="100%" cellspacing="0" cellpadding="0" class="productListing">
+	<tr>
+		<td tal:repeat="heading headings" class="productListing-heading" tal:attributes="align heading/align" tal:content="structure heading/text">Intestazioni</td>
+	</tr>
+	<tr tal:repeat="product products" tal:attributes="class product/class">
+		<td tal:repeat="data product/data" tal:attributes="class data/class;align data/align" tal:content="structure data/text"></td>
+	</tr>
+</table>
+<table tal:condition="bottom_page_links_show" border="0"  cellspacing="0" cellpadding="2">
+  <tr>
+    <td class="smallText" tal:content="structure number_of_products">..qui compare il numero di prodotti visualizzati..</td>
+    <td class="smallText" tal:content="structure bottom_page_links" align="right">Pagina 1 2 3</td>
+  </tr>
+</table>
+<table tal:condition="legend_availability_show" border="0" width="100%" cellspacing="0" cellpadding="2">
+  <tr>
+    <td class="productListing-heading" colspan="4" tal:content="structure legend_availability_heading">Legenda Disponibilit&agrave;</td>
+  </tr>
+  <tr valign="absmiddle">
+    <td align="center" class="smallText"><img tal:attributes="src legend_availability_green_image;title legend_availability_green_text"/>&nbsp;<span tal:omit-tag="" tal:content="structure legend_availability_green_text">Disponibilit&agrave; piena</span></td>
+    <td align="center" class="smallText"><img tal:attributes="src legend_availability_blue_image;title legend_availability_blue_text"/>&nbsp;<span tal:omit-tag="" tal:content="structure legend_availability_blue_text">Disponibilit&agrave; in arrivo</span></td>
+    <td align="center" class="smallText"><img tal:attributes="src legend_availability_yellow_image;title legend_availability_yellow_text"/>&nbsp;<span tal:omit-tag="" tal:content="structure legend_availability_yellow_text">Disponibilit&agrave; scarsa</span></td>
+    <td align="center" class="smallText"><img tal:attributes="src legend_availability_red_image;title legend_availability_red_text"/>&nbsp;<span tal:omit-tag="" tal:content="structure legend_availability_red_text">Disponibilit&agrave; esaurito</span></td>
+   </tr>
+</table>
+
+
+</body>
+</html>

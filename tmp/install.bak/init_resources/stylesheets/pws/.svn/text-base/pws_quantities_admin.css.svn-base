@@ -1,0 +1,90 @@
+/* PWS_QUANTITIES STYLES sezione admin*/
+
+
+.pws_offer_strips_table, .pws_offer_strips_listing_table{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background: #BCDEFF;
+}
+
+.pws_products_listing_select_quantity{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	
+}
+.pws_product_price_resume{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+/*
+  Table usata per l'impostazione degli sconti quantità nell'editing del prodotto
+*/
+.pws_offer_strips_table_edit{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-bottom:10px;
+}
+#pws_quantity_discounts_table_edit th{
+	color:white;
+	background-color:#3399FF;
+}
+#pws_quantity_discounts_table_edit th, #pws_quantity_discounts_table_edit td {
+	border: 1px solid #3399FF;
+}
+#pws_quantity_discounts_table_edit input{
+	border: none;
+	padding-left: 5px;
+}
+.pws_offer_strip_selected {
+	background-color: #B0FFE6;
+}
+.pws_offer_strip_not_selected {
+}
+.pws_borderless_input_box {
+	border:none;
+}
+
+.pws_product_discount, .pws_product_from_quantity, .pws_product_to_quantity, .pws_product_orig_price, .pws_product_final_price, .pws_product_from_quantity_listing, .pws_product_orig_price_listing, .pws_product_final_price_listing{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.pws_product_orig_price, .pws_product_orig_price_listing{
+	font-size: 10px;
+	color: black;
+	text-decoration: line-through;
+	font-style: italic;
+}
+.pws_product_from_quantity, .pws_product_from_quantity_listing, .pws_product_to_quantity, .pws_product_to_quantity_listing, .pws_product_discount{
+	font-size: 10px;
+	color: black;
+}
+.pws_product_final_price, .pws_product_final_price_listing{
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	color: Red;
+}
+.pws_product_final_price_listing{
+	font-weight: bolder;
+	font-size: 12px;
+}
+.pws_product_orig_price_listing{
+	font-size: 10px;
+}
+.pws_product_from_quantity_listing{
+	font-size: 12px;
+}
+/* 
+  Table riassuntiva degli sconti quantità
+*/
+#pws_quantities_info_table{
+	border-left:1px solid gray;
+	border-top:1px solid gray;
+}
+#pws_quantities_info_table td{
+	border-right:1px solid gray;
+	border-bottom:1px solid gray;
+	padding:2px 2px 2px 2px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Shopping Cart</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- shopping_cart_table //-->
+<table tal:omit-tag="" metal:define-macro="product_row">
+ <tr tal:attributes="class row_class">
+  <td align="center" class="productListing-data" valign="top" tal:content="structure product/input_remove_checkbox"></td>
+  <td class="productListing-data">
+    <table border="0" cellspacing="2" cellpadding="2">
+     <tr>
+      <td class="productListing-data" align="center"><a tal:attributes="href product/products_url" tal:content="structure product/thumbnail"></a></td>
+      <td class="productListing-data" align="center">
+      	<a tal:attributes="href product/products_url"><b tal:content="structure product/name"></b></a>
+      	<span tal:omit-tag="" tal:content="structure product/stock_check"/>
+      	<span tal:omit-tag="" tal:content="structure product/attributes_list"/>
+      	<span tal:omit-tag="" tal:content="structure product/availability"/>
+      </td>
+     </tr>
+    </table>
+  </td>
+  <td align="center" class="productListing-data" valign="top" tal:content="structure product/input_quantity">campo per l'introduzione della quantit&agrave;</td>
+  <td align="right" class="productListing-data" valign="top" tal:content="structure product/price_resume">riassunto del prezzo del prodotto</td>
+ </tr>
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="productListing">
+	<tr>
+		<td class="productListing-heading" tal:repeat="header headers" tal:content="structure header"></td>
+	</tr>
+	<span tal:repeat="product products" tal:omit-tag="">
+		<span tal:omit-tag="" tal:condition="php:product['row']%2 EQ 0">
+			<span tal:define="row_class string:productListing-even" metal:use-macro="product_row"/>
+		</span>
+		<span tal:omit-tag="" tal:condition="php:product['row']%2 EQ 1">
+			<span tal:define="row_class string:productListing-odd" metal:use-macro="product_row"/>
+		</span>
+	</span>
+</table>
+<!-- shopping_cart_table eof //-->
+</body>
+</html>

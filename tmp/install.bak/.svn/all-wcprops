@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/oscommerce_pws/!svn/ver/5384/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install
+END
+stylesheet.css
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/5069/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/stylesheet.css
+END
+autoinstall.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/autoinstall.php
+END
+install_resources.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/install_resources.php
+END
+copy_resources_cl.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/3368/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/copy_resources_cl.php
+END
+oscommerce.sql
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/5127/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/oscommerce.sql
+END
+install.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/4047/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/install.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/index.php
+END
+upgrade.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/upgrade.php
+END

@@ -1,0 +1,36 @@
+/* PWS_PRICES STYLES sezione front-end*/
+/*
+ Table usata per il riassunto del prezzo prodotto
+ nel checkout_confirmation, nel riassunto dell'ordine,
+ e nel carrello
+ */
+#pws_prices_resume_table,#pws_prices_resume_table td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:10px;
+}
+
+/*
+ Table usata per il riassunto del prezzo prodotto
+ nella scheda prodotto (product_info)
+ */
+ 
+#pws_prices_discounts_table{
+	border-right:1px solid #3d5e5f;
+	border-bottom:1px solid #3d5e5f;
+	border-top:1px solid #fdfeff;
+	border-left:1px solid #fdfeff;
+}
+#pws_prices_discounts_table,#pws_prices_discounts_table tr td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:12px;
+	font-weight:normal;
+	background: #f2eef3;
+}
+
+#pws_prices_discounts_table_big,#pws_prices_discounts_table_big tr td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:12px;
+}

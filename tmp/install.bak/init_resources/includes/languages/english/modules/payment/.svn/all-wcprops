@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment
+END
+sofortueberweisung_direct.php
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/sofortueberweisung_direct.php
+END
+vagliapostale.php
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/vagliapostale.php
+END
+psigate.php
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/psigate.php
+END
+paypal_ipn.php
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/paypal_ipn.php
+END
+chronopay.php
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/chronopay.php
+END
+cod.php
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/cod.php
+END
+paypal_wpp.php
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/paypal_wpp.php
+END
+authorizenet.php
+K 25
+svn:wc:ra_dav:version-url
+V 173
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/authorizenet.php
+END
+moneyorder.php
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/moneyorder.php
+END
+secpay.php
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/secpay.php
+END
+pm2checkout.php
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/pm2checkout.php
+END
+nochex.php
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/nochex.php
+END
+payquake_cc.php
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/payquake_cc.php
+END
+cc.php
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/cc.php
+END
+bancasella.php
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/bancasella.php
+END
+paypal.php
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/paypal.php
+END
+ipayment.php
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/ipayment.php
+END
+worldpay_junior.php
+K 25
+svn:wc:ra_dav:version-url
+V 176
+/svn/oscommerce_pws/!svn/ver/1301/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/worldpay_junior.php
+END
+bonifico.php
+K 25
+svn:wc:ra_dav:version-url
+V 169
+/svn/oscommerce_pws/!svn/ver/5068/tags/oscommerce_pws_ioncube_1298/httpdocs_init_resources/install/init_resources/includes/languages/english/modules/payment/bonifico.php
+END

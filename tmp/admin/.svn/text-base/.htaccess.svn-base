@@ -1,0 +1,13 @@
+php_flag register_globals 1
+php_value register_globals 1
+DirectoryIndex index.php
+<IfModule mod_security.c>
+# Turn the filtering engine On or Off or DynamicOnly for cgi/php/etc
+SecFilterEngine Off
+</IfModule>
+<IfDefine SecFilterEngine>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfDefine>
+
+

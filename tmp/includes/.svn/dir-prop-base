@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 58
+configure.php
+languages
+sts_templates
+sts_templates_*
+
+END

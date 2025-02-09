@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Best Sellers Scroll Box</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<!-- start bestsellersbox //-->
+<span tal:comment="La skin box_simple_header richiede la definizione della variabile 'title'"
+      tal:define="title box_heading"
+      metal:use-macro="boxes.htm/box_simple_header"/>
+
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <center metal:fill-slot="box_contents">
+    	<MARQUEE behavior= "scroll" align= "center" direction= "up" height="160" scrollamount= "2" scrolldelay= "20" onmouseover='this.stop()' onmouseout='this.start()'>
+	    	<span tal:omit-tag="" tal:repeat="product products">
+	    		<center>
+			<span tal:content="structure product/products_image_lightbox">Lighbox set se ci sono immagini multiple
+					</span>
+	    		<br/>
+	    		<a tal:attributes="href product/products_link" tal:content="structure product/products_name">Matrox G200 MMS</a>
+	    		<br/>
+	    		 <a tal:attributes="href product/products_link" tal:content="structure product/products_price">&euro; 53,00</a>
+	    		<br/>______________<br/>
+	    		</center>
+	    		<br/><br/>
+	    	</span>
+    	</MARQUEE>
+	  </center>
+</span>
+<!-- end bestsellersbox //-->
+</body>
+</html>

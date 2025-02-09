@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/oscommerce_pws/!svn/ver/5377/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules
+END
+product_listing.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/5298/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/product_listing.php
+END
+downloads.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/downloads.php
+END
+xsell_products.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/xsell_products.php
+END
+new_products.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/oscommerce_pws/!svn/ver/4967/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/new_products.php
+END
+pws_engine.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/4888/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/pws_engine.php
+END
+categories_listing.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/oscommerce_pws/!svn/ver/3349/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/categories_listing.php
+END
+also_purchased_products.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/oscommerce_pws/!svn/ver/3132/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/also_purchased_products.php
+END
+specials.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/oscommerce_pws/!svn/ver/4967/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/specials.php
+END
+checkout_new_address.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/checkout_new_address.php
+END
+address_book_details.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/address_book_details.php
+END
+upcoming_products.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/upcoming_products.php
+END
+default_specials.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/3364/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/default_specials.php
+END
+product_filters.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/4462/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/product_filters.php
+END

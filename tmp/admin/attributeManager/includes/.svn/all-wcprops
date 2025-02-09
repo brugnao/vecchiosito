@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/oscommerce_pws/!svn/ver/4864/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes
+END
+attributeManagerPlaceHolder.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes/attributeManagerPlaceHolder.inc.php
+END
+attributeManagerPrompts.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/oscommerce_pws/!svn/ver/4640/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes/attributeManagerPrompts.inc.php
+END
+attributeManagerGeneralFunctions.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/oscommerce_pws/!svn/ver/4864/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes/attributeManagerGeneralFunctions.inc.php
+END
+attributeManagerHeader.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes/attributeManagerHeader.inc.php
+END
+attributeManagerSessionFunctions.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes/attributeManagerSessionFunctions.inc.php
+END
+attributeManagerUpdateAtomic.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/oscommerce_pws/!svn/ver/4633/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/attributeManager/includes/attributeManagerUpdateAtomic.inc.php
+END

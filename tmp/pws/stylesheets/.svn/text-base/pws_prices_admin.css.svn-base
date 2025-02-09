@@ -1,0 +1,39 @@
+/* PWS_PRICES STYLES sezione admin*/
+/*
+  Classe usata dalle legende dei fieldset nell'editing del prodotto
+*/
+.pws_fieldset_label {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: 12px !important;
+	color: blue !important;
+	font-variant:none !important;
+	font-style:normal !important;
+}
+
+/*
+  Classe usata negli input fields disabilitati
+*/
+.pws_textfield_disabled{
+	background-color:#cccccc;
+	color:#666666;
+	font-family:Arial, Verdana;
+	font-size:10px;
+}
+
+/*
+ Table usata per il riassunto del prezzo prodotto
+ */
+#pws_prices_resume_table,#pws_prices_resume_table td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:10px;
+}
+
+/*
+ Table usata per il riassunto del prezzo prodotto
+ */
+#pws_prices_discounts_table,#pws_prices_discounts_table tr td{
+	width:100%;
+	font-family:Arial, Verdana;
+	font-size:10px;
+}

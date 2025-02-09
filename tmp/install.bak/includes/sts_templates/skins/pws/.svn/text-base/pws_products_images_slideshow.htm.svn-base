@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Products Images Slideshow Html Version</title>
+<link href="../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="pwsAdditionalImagesSlideshow" nowrap="true">
+	<div class="pwsAdditionalImageContainer" nowrap="true">
+		<div class="pwsAdditionalImageThumbnail" tal:repeat="image images" >
+		    <span tal:content="structure image/products_image_lightbox">Lighbox set se ci sono immagini multiple
+					</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

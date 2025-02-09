@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/oscommerce_pws/!svn/ver/4553/tags/oscommerce_pws_ioncube_1298/httpdocs/icecat/libs/jshttprequest
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/4348/tags/oscommerce_pws_ioncube_1298/httpdocs/icecat/libs/jshttprequest/.htaccess
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/4348/tags/oscommerce_pws_ioncube_1298/httpdocs/icecat/libs/jshttprequest/config.php
+END

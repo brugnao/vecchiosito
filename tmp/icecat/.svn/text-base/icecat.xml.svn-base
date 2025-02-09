@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="icecat" varsion="1.0" author="Mikel" authorsemail="anmishael@gmail.com">
+<install>
+	<class>
+		<name>iceosc</name>
+		<filename>iceosc.class.php</filename>
+		<method>
+			<name>install</name>
+			<params>
+				<param>
+					<name>arrSql</name>
+					<value>
+				 	  <sql>CREATE TABLE IF NOT EXISTS `icecat_products` (`products_id` INT( 11 ) NOT NULL ,`prod_id` VARCHAR( 64 ), `vendor` VARCHAR( 64 ) NOT NULL ,`lang` VARCHAR( 3 ) NOT NULL,`changed` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,`data` TEXT NOT NULL, UNIQUE KEY `products_vendors` (`products_id`, `vendor`, `prod_id`, `lang`))</sql> 
+					<!--  <sql>ALTER TABLE `products` ADD COLUMN `vpn` VARCHAR(64) NULL</sql> -->
+						<sql>INSERT INTO `configuration_group` (`configuration_group_id`, `configuration_group_title`, `configuration_group_description`, `sort_order`, `visible`) VALUES (714, 'ICEcat', 'ICEcat plugin', 417, 1)</sql>
+						<sql>INSERT INTO `configuration` (`configuration_title`, `configuration_key`, `configuration_value`, `configuration_description`, `configuration_group_id`,`sort_order`) VALUES ('ICEcat login', 'ICECAT_USER', '', 'Enter your ICEcat username', 714, 1)</sql>
+						<sql>INSERT INTO `configuration` (`configuration_title`, `configuration_key`, `configuration_value`, `configuration_description`, `configuration_group_id`,`sort_order`) VALUES ('ICEcat password', 'ICECAT_PASS', '', 'Enter your ICEcat password', 714, 2)</sql>
+						 <sql>CREATE TABLE IF NOT EXISTS `pws_products_images` (`products_id` int(11) NOT NULL default '0',`products_image` varchar(255) NOT NULL,`sort_order` int(2) default NULL,UNIQUE KEY `pws_products_images_u` (`products_id`,`products_image`))</sql> 
+					</value>
+				</param>
+			</params>
+		</method>
+	</class>
+</install>
+<uninstall>
+	<class>
+		<name>iceosc</name>
+		<filename>iceosc.class.php</filename>
+		<method>
+			<name>uninstall</name>
+			<params>
+				<param>
+					<name>arrSql</name>
+					<value>
+					<!--	<sql>DROP TABLE IF EXISTS `icecat_products`</sql> -->
+					<!-- 	<sql>ALTER TABLE `products` DROP COLUMN `vpn`</sql> -->
+						<sql>DELETE FROM `configuration` WHERE `configuration_key`='ICECAT_USER' LIMIT 1</sql>
+						<sql>DELETE FROM `configuration` WHERE `configuration_key`='ICECAT_PASS' LIMIT 1</sql>
+						<sql>DELETE FROM `configuration_group` WHERE `configuration_group_id`=714 LIMIT 1</sql>
+					</value>
+				</param>
+			</params>
+		</method>
+	</class>
+</uninstall>
+</package>

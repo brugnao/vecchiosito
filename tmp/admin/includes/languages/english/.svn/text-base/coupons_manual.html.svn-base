@@ -1,0 +1,459 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>How to use the Discount Coupon Codes Module</title>
+<style type="text/css">
+<!--
+.tableBorder {
+	border: 1px solid #333333;
+}
+body {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 10pt;
+}
+.code {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	background-color: #FFFFCC;
+	border: 1px solid #333333;
+	overflow: auto;
+	margin: 5px;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+h3 {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 14pt;
+	font-weight: bolder;
+	font-variant: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+	border-left-width: 10px;
+	border-left-style: solid;
+	border-left-color: #333333;
+	padding-left: 10px;
+	margin-top: 50px;
+}
+h2 {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 16pt;
+	font-weight: bolder;
+	color: #99CCCC;
+	background-color: #333333;
+	text-align: center;
+	padding: 5px;
+}
+h4 {
+	font-family: Tahoma, "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 14pt;
+	font-weight: bolder;
+	font-style: italic;
+}
+li {
+	margin-bottom: 10px;
+}
+.notice {
+	background-color: #BFDFFF;
+	padding: 2px;
+	border: 1px solid #666666;
+	margin: 20px;
+	width: 95%;
+}
+.style1 {color: #0000FF}
+-->
+</style>
+</head>
+
+<body>
+<h2>How to use the Discount Coupon Codes Module</h2>
+<h3>Contents:</h3>
+<ul>
+  <li><a href="#configure">Configuring the Order Total Module</a></li>
+  <li><a href="#creating">Creating Discount Coupon Codes</a>
+    <ul>
+      <li><a href="#fields">Explanation of Coupon Fields</a>
+      </li>
+    </ul>
+  </li>
+  <ul>
+    <li><a href="#exclusions">Exclusions</a></li>
+  </ul>
+  <li><a href="#support">Support</a></li>
+</ul>
+<h3><a name="configure"></a>Configuring the Order Total Module</h3>
+ <p>To configure the Discount Coupon Codes module, go to <strong>Modules
+   &gt; Order Total &gt; Discount Coupon</strong> in the admininistration section
+   of your website. Click the <strong>Edit</strong> button on the right side
+   of the screen to edit the configuration options. Explanations for each option
+   are provided below:</p>
+ <ul><li><strong>Enable discount coupon?</strong>     <br>
+    Set this option to true to use the discount coupons
+   module. If it is set to
+    false, the Discount Coupon Code box will not appear on the
+   checkout payment
+    page.    </li>
+   <li><strong>Sort Order</strong>     <br>
+     Set this to a UNIQUE value. Each order total
+    module must have a unique sort
+     order, or they will not display correctly.</li>
+   <li><strong>Display discount with minus (-) sign?</strong>     <br>
+     Set this option to true to have the discount
+    display with a minus sign in
+     the order confirmation, invoice, etc. If this
+    is set to false, the discount
+     line will simply display the discount amount. </li>
+   <li><strong>Display subtotal with applied discount?</strong>     <br>
+     Set this option to true to display the order
+    subtotal with the discount
+     applied. If this option is set to true, you
+    will want to set the sort order
+     for the discount coupons so that it displays
+    before the order subtotal line,
+     like so:
+       <br>
+       <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+         <tr>
+           <td align="right">Item Doodle x 1:&nbsp;&nbsp;&nbsp;</td>
+           <td>$25.00</td>
+         </tr>
+         <tr>
+           <td align="right">Discount Coupon XYZ Applied:&nbsp;&nbsp;&nbsp;</td>
+           <td>-$5.00</td>
+         </tr>
+         <tr>
+           <td align="right">Subtotal:&nbsp;&nbsp;&nbsp;</td>
+           <td>$20.00</td>
+         </tr>
+         <tr>
+           <td align="right">Tax:&nbsp;&nbsp;&nbsp;</td>
+           <td>$1.39</td>
+         </tr>
+         <tr>
+           <td align="right">Total:&nbsp;&nbsp;&nbsp;</td>
+           <td>$21.39</td>
+         </tr>
+       </table>
+         If this option is set to false, the discount
+ will not be applied to the
+  order subtotal. In this case, you will want to
+ set the sort order for the
+  discount coupons so that it displays after the
+ order subtotal line:
+         <br>
+         <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+           <tr>
+             <td align="right">Item Doodle x 1:&nbsp;&nbsp;&nbsp;</td>
+             <td>$25.00</td>
+           </tr>
+           <tr>
+             <td align="right">Subtotal:&nbsp;&nbsp;&nbsp;</td>
+             <td>$25.00</td>
+           </tr>
+           <tr>
+             <td align="right">Discount Coupon XYZ Applied:&nbsp;&nbsp;&nbsp;</td>
+             <td>-$5.00</td>
+           </tr>
+           <tr>
+             <td align="right">Tax:&nbsp;&nbsp;&nbsp;</td>
+             <td>$1.39</td>
+           </tr>
+           <tr>
+             <td align="right">Total:&nbsp;&nbsp;&nbsp;</td>
+             <td>$21.39</td>
+           </tr>
+         </table>
+   </li>
+   <li><strong>Exclude product specials?</strong><br>
+     If this is set to true, discounts will not be applied to products currently
+       on special. </li>
+   <li><strong>Random Code Length</strong>    <br>
+     When you choose to create a new coupon, the discount coupons
+    module will create a random string of letters
+   and numbers for you. This
+    setting controls the length of randomly
+   generated codes. </li>
+   <li><strong>Display discount total lines for each tax group?</strong> <br>
+Discount coupons are applied to each item separately, in order to properly calculate
+  tax if there are multiple tax groups (local and state taxes, for example).
+  Set this to true to display the discount applied to each tax group. Set this
+  to false to combine the discount and display as one order total line. If you
+  only use one tax class, this setting is ignored. If you have multiple tax classes,
+  you will want to consider how you wish them to display. For example, this is
+  how the confirmation page, confirmation email, and invoice would appear
+for an order with multiple tax classes and this setting is set to true:
+  <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+    <tr>
+      <td align="right">Subtotal:&nbsp;&nbsp;&nbsp;</td>
+      <td>$25.00</td>
+    </tr>
+    <tr>
+      <td align="left">Discount Coupon XYZ Applied (State tax):&nbsp;</td>
+      <td>-$2.30</td>
+    </tr>
+    <tr>
+      <td align="right">Discount Coupon XYZ Applied (Local tax):&nbsp;&nbsp;&nbsp;</td>
+      <td>-$2.70</td>
+    </tr>
+    <tr>
+      <td align="right">Tax:&nbsp;&nbsp;&nbsp;</td>
+      <td>$1.39</td>
+    </tr>
+    <tr>
+      <td align="right">Total:&nbsp;&nbsp;&nbsp;</td>
+      <td>$21.39</td>
+    </tr>
+  </table>
+      And this is how the same order would appear when this setting is set to
+      false:
+      <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+     <tr>
+       <td align="right">Subtotal:&nbsp;&nbsp;&nbsp;</td>
+       <td>$25.00</td>
+     </tr>
+     <tr>
+       <td align="right">Discount Coupon XYZ Applied:&nbsp;&nbsp;&nbsp;</td>
+       <td>-$5.00</td>
+     </tr>
+     <tr>
+       <td align="right">Tax:&nbsp;&nbsp;&nbsp;</td>
+       <td>$1.39</td>
+     </tr>
+     <tr>
+       <td align="right">Total:&nbsp;&nbsp;&nbsp;</td>
+       <td>$21.39</td>
+     </tr>
+   </table>
+   </li>
+   <li><strong>Allow negative order total?</strong> <br>
+     Set this to false to prevent order totals from being negative. This can
+       happen if you create a fixed discount coupon with no price minimum. </li>
+   <li><b>Use the language file to format display string?</b><br>
+     When you have multiple languages and want the order total line for the discount
+       to appear in the language selected by the customer, you will need to set
+       this option to true and edit the includes/languages/<em>your_language</em>/modules/order_total/ot_discount_coupon.php
+       file. If you use only one language, you can set this to false and use
+       the <strong>Display Format for Order Total Line</strong> configuration
+       field to format the order total line.  If this field is set to true, then
+       the value in the <strong>Display Format for Order Total Line</strong> configuration
+       field will be ignored.</li>
+   <li><strong>Display Format for Order Total Line</strong>    <br>
+     Use this setting to change how the discount
+   coupons order total line is
+    formatted and displayed on
+   the checkout confirmation page, the confirmation email, and invoice. You
+       can insert the variables to display dynamic
+    data, such as the coupon code used or the
+   discount percent.  For example, a display format of &quot;<span class="style1">Discount
+   Coupon [code] for [discount_amount] applied</span>&quot; would display invoice
+   as:
+   <table border="0" align="center" cellpadding="0" cellspacing="0" class="tableBorder">
+         <tr>
+           <td align="right">Subtotal:&nbsp;&nbsp;&nbsp;</td>
+           <td>$25.00</td>
+         </tr>
+         <tr>
+           <td align="right"><span class="style1">Discount Coupon XYZ for 20%
+           Applied</span>:&nbsp;&nbsp;&nbsp;</td>
+           <td>-$5.00</td>
+         </tr>
+         <tr>
+           <td align="right">Tax:&nbsp;&nbsp;&nbsp;</td>
+           <td>$1.39</td>
+         </tr>
+         <tr>
+           <td align="right">Total:&nbsp;&nbsp;&nbsp;</td>
+           <td>$21.39</td>
+         </tr>
+     </table>
+     The
+         list of available variables:
+       <ul> 
+         <li>[code]</li>
+         <li>[coupon_desc]</li>
+         <li>[discount_amount]</li>
+         <li>[min_order]</li>
+         <li>[number_available]</li>
+         <li>[tax_desc]
+           </p>
+         </li>
+       </ul>
+   </li>
+   <li><strong>Debug Mode</strong><br>
+     Set this to true to print out some helpful debugging information on checkout_confirmation.php.
+       To view the debug info, View Source in your browser. The debug info is
+       printed inside the &quot;&lt;!-- Discount Coupons DEBUG&quot; and &quot;End
+       Discount Coupons DEBUG--&gt;&quot; HTML comment
+       tags at the top of that file.</li>
+<p class="notice"><strong>Please Note:</strong> When Debug Mode is &quot;on&quot; (set
+to true), error messages will not work - the user will not be redirected to the
+payment screen when there is an error. </span>
+ </ul>
+ <h3><a name="creating"></a>Creating Discount Coupon Codes</h3>
+ <p>Log in to your admin section and go to <strong>Catalog   &gt; Discount
+   Coupons</strong>. Click the
+   <strong>New Coupon</strong> button to create a new Discount Coupon Code. The
+   only field that is required is the discount amount.</p>
+ <p>Once you have created a discount coupon code, you may distribute it in any
+   format. The only information a customer will need to use a coupon is the code
+   you specified when creating the coupon. You can send out codes in newsletters,
+   order confirmations, etc. </p>
+ <p> Discounts are displayed as order total lines in the customer's checkout
+ confirmation screen and order history screen, and in all admin order screens.
+</p>
+ <p>Discounts are applied BEFORE tax. </p>
+ <h4><a name="fields"></a>Explanation of Coupon Fields: </h4>
+ <ul>
+   <li> <strong>Coupon Code</strong>     <br>
+     This is the code you will give to customers
+    which they enter during the
+     checkout process. It can consist of any alphanumeric
+    characters, up to 32
+     characters long.
+If you leave this field blank, a random alphanumeric code will be generated
+       for you. See <strong>Random Code Length</strong> in <a href="#configure">Configuring
+       the Order Total Module</a>     to edit the length of random codes generated. This field cannot be edited
+     for existing coupons. </li>
+   <li><strong>Description</strong>     <br>
+     This is a short description field to help you
+    administer your coupons.
+     The contents of this field are not displayed to the customer unless you
+       choose to display it in the order total format. See <strong>Display
+       Format for the Order Total Line</strong> in <a href="#configure">Configuring
+       the Order Total Module</a>.</li>
+   <li><strong>Discount Amount </strong>     <br>
+     The discount amount to apply to the order.<br>
+     <p class="notice">- For percentage discounts, enter the amount as a decimal.
+       For example, <strong>.15</strong>   instead of 15 or 15% for a discount
+       of 15% <br>
+   - For fixed discounts, enter the amount exactly as you want it to appear.
+   For example, <strong>10</strong> for a $10 discount <br>
+   - For shipping discounts, enter the percentage discount you wish to offer.
+   For example, <strong>1</strong> for free shipping, <strong>.5</strong> for
+   50% off shipping</p> 
+   </li>
+   <li><strong>Discount Type </strong><br>
+     Select the type of discount this is. Make sure that your discount amount
+       is in the proper format for the discount type you have chosen. </li>
+   <li> <strong>Start Date</strong>     <br>
+     Enter a start date if you wish to limit the when
+    customers may begin using
+     this coupon. You may leave this field empty to
+    allow customers to use the
+     coupon as soon as it is created. </li>
+   <li><strong>End Date</strong>     <br>
+     Enter an ending date if you wish to limit how
+    long customers may use this
+     coupon. You may leave this field empty to allow
+    customers to use the
+     coupon as long as they wish.            <p class="notice">Start dates and end dates must
+       be in the same format as the formatting specified in admin/includes/languages/english.php
+       (or the appropriate main language file for the language of your admin
+       section). </p>
+   </li>
+   <li><strong>Max Use</strong>     <br>
+     Enter the maximum number of times each individual customer may
+    use this coupon. If you
+     do not enter a value, or you enter 0, the
+    customer will be allowed to use
+     this coupon an unlimited number of times.              </li>
+   <li><strong>Min Order</strong>     <br>
+     Enter the minimum order subtotal a customer must
+    have before he or she may
+     use this coupon. If you do not enter a value,
+    or you enter 0, there will
+     be no order minimum required for this coupon.</li>
+   <li><strong>Min Order Type </strong>     <br>
+     Select the type of minimum order restriction you'd like to use. If you select
+       Price Total, the minimum order total required for a customer to use the
+       coupon will be the value entered in the Min Order field. If you select
+       Product Quantity, the minimum number of items required for a customer
+       to use the coupon will be the value entered in the Min Order field. </li>
+   <li><strong>Number Available</strong>     <br>
+     Enter the global number of coupons available.
+    You may use this to limit the      number of times the coupon
+can be used for the entire store. This may be used to
+     give a discount to the first 200 customers on a
+    particular day, for example. </li>
+ </ul>
+ <h4><a name="exclusions" id="exclusions"></a>Exclusions</h4>
+ <p>You have the ability to manage excluded products, categories, manufacturers,
+   customers, and shipping zones for each coupon you create. Customers will not
+   be notified a product is excluded unless the order total/product quantity
+   of non-excluded items doesn't meet the Min Order requirement for the coupon.
+   In that case, they will not be given notice which particular items are excluded.
+   If you create coupons with exclusions, it is recommended to ensure the customers
+   know up front which products are excluded to avoid confusion. </p>
+ <p>You must create a coupon before you can manage exclusions for that coupon.
+   See the section on <a href="#creating">Creating Discount Coupon Codes</a> for
+   help. </p>
+ <p>Log in to your admin section and go to <strong>Catalog &gt; Discount Coupons</strong>.
+   Select the coupon for which you wish to manage exclusions. In the box on the
+   right side of the screen, you will see six buttons: edit, delete, product
+   exclusions, manufacturer exclusions, category exclusions, customer exclusions,
+   and shipping zone exclusions. Click on the button for the type of exclusions
+   you wish to create.</p>
+ <p>The four exclusions screens work similarly. The box on the left will list
+   products/manufacturers/categories/customers for which the coupon is NOT excluded.
+   The box on the right lists 
+   products/manufacturers/categories/customers for which the coupon IS 
+   excluded. Use the top four buttons between these two boxes to move products
+   from one box to the other. Click save when you are done.</p>
+ <p class="notice">If a product is in <em>any</em> excluded category, it will
+   be considered an excluded item. For example, Product A is in Category 1 and
+   Category 2. Category 1 is an excluded category. Even if a customer sees Product
+   A in Category 2 and adds it to his/her cart, the product will still be considered
+   excluded because Category 1 is excluded.</p>
+ <p>You may edit the fields that are displayed in the exclusions boxes by editing
+   the following code starting on line 17 in admin/coupons_exclusions.php:</p>
+ <pre class="code">
+  /**********************************************/
+  //toggle these true/false to determine which fields to display in product list in the same order as they are listed below
+
+  $display_fields = array(
+                          'categories' => array( 'c.categories_id' => false,
+                                                 'cd.categories_name' => true ),
+                                                 
+                          'customers' => array( 'c.customers_id' => false,
+                                                'CONCAT( c.customers_firstname, CONCAT( " ", c.customers_lastname ) ) AS name' => true,
+                                                'c.customers_email_address' => false ),
+
+                          'manufacturers' => array( 'm.manufacturers_id' => false,
+                                                    //'mi.manufacturers_url' => false,
+                                                    'm.manufacturers_name' => true ),
+
+                          'products' => array( 'p.products_id' => false,
+                                               'p.products_model' => false,
+                                               'pd.products_name' => true,
+                                               'p.products_price' => false ) );
+
+  //separator for the fields in the listing
+  $separator = ' :: ';
+
+  //category exclusions
+  //separator for the category names
+  $category_separator = '->';
+  //toggle true/false to determine whether to display the full category path
+  $category_path = true;
+  //end category exclusions
+
+  /**********************************************/</pre>
+ <p>You may prevent a field from being displayed by editing it's true/false status
+   in the $display_fields array. The other settings modify the characters used
+   to separate multiple fields in the exclusions boxes. </p>
+ <h3><a name="support"></a>Support</h3>
+ <p>You can find support for this contribution at <a href="http://forums.oscommerce.com/index.php?showtopic=213019">http://forums.oscommerce.com/index.php?showtopic=213019</a> (OSCommerce
+   User Forums).<strong> Please read through the 
+ common problems in the install.html file or previous postings to see if your
+   problem or question has already been answered. </strong>If you are posting
+   about problems with exclusions or calculations, please set the <strong>Debug
+   Mode</strong> to true in <a href="#configure">Configuring the Order Total
+   Module</a> to
+   capture debugging information and include that output in your post. </p>
+ <p>Bug fixes and new releases are added to the contribution page at <a href="http://www.oscommerce.com/community/contributions,4269">http://www.oscommerce.com/community/contributions,4269</a>.</p>
+</body>
+</html>

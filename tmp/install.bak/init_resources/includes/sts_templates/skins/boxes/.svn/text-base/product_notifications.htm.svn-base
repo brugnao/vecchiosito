@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Products Notifications</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start bestsellersbox //-->
+<span tal:comment="La skin box_simple_header richiede la definizione della variabile 'title'"
+      tal:define="title box_heading"
+      metal:use-macro="boxes.htm/box_simple_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <center metal:fill-slot="box_contents">
+    	<table border="0" cellspacing="0" cellpadding="2">
+    	 <tr>
+    	  <td class="infoBoxContents">
+    	   <a tal:attributes="href submit_image/link">
+    	   	<img border="0" tal:attributes="src submit_image/src;alt submit_image/alt;title submit_image/title"/>
+    	   </a>
+    	  </td>
+    	  <td class="infoBoxContents">
+    	   <a tal:attributes="href submit_image/link" tal:content="structure text">Comunica gli aggiornamenti di <b>Courage Under Fire</b></a>
+    	  </td>
+    	 </tr>
+    	</table>
+	  </center>
+</span>
+<!-- end bestsellersbox //-->
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+<body>
+<div class="pwsQuantitiesTag" tal:content="structure tagtitle" tal:attributes="id tagid;onmouseover mouseon;onmouseout mouseoff"/>
+<div tal:attributes="id divid" class="pwsPopupInfo">
+<table cellpadding="0" cellspacing="0" border="0" class="pws_quantities_info" id="pws_quantities_info_table">
+<tr tal:repeat="strip strips">
+	<td align="center" tal:content="structure strip/qty_start">0</td>
+	<td align="center" tal:content="structure strip/discount">20%</td>
+	<td align="center" tal:content="structure strip/final_price">800€</td>
+</tr>
+</table></div>
+</body>
+</html>

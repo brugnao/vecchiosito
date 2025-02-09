@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/oscommerce_pws/!svn/ver/5367/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment
+END
+vagliapostale.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/vagliapostale.php
+END
+paypal_ipn.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/oscommerce_pws/!svn/ver/5367/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/paypal_ipn.php
+END
+riba30.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/4820/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/riba30.php
+END
+riba60.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/4820/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/riba60.php
+END
+postepay.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/postepay.php
+END
+ccp.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/ccp.php
+END
+cod.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/oscommerce_pws/!svn/ver/5223/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/cod.php
+END
+ppec.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/oscommerce_pws/!svn/ver/5354/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/ppec.php
+END
+bonifico.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/includes/modules/payment/bonifico.php
+END

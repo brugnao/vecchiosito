@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Php/Attribute/METAL
+END
+DefineMacro.php
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Php/Attribute/METAL/DefineMacro.php
+END
+DefineSlot.php
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Php/Attribute/METAL/DefineSlot.php
+END
+UseMacro.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/oscommerce_pws/!svn/ver/3567/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Php/Attribute/METAL/UseMacro.php
+END
+FillSlot.php
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/oscommerce_pws/!svn/ver/1328/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/PHPTAL5/PHPTAL/Php/Attribute/METAL/FillSlot.php
+END

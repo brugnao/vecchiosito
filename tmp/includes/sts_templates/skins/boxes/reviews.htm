@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Reviews</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start reviewsbox //-->
+<span tal:comment="	La skin box_complete_header richiede la definizione della variabile 'title'
+					e della variabile more, un array che contiene un link, una variabile booleana 'visible',
+					un'indirizzo dell'immagine della freccia 'image', ed un 'title' per la freccia"
+      tal:define="title box_heading;more more"
+      metal:use-macro="boxes.htm/box_complete_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <center tal:omit-tag="" metal:fill-slot="box_contents">
+		<span tal:omit-tag="" tal:content="structure content"/>
+	  </center>
+</span>
+<!-- end reviewsbox //-->
+</body>
+</html>

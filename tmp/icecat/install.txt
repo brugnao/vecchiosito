@@ -1,0 +1,288 @@
+For generic information about ICEcat please visit 
+http://www.icecat.biz/en/menu/services/index.htm
+This contribution is developed by AdvanceWebSoft http://www.advancewebsoft.com/ (developer Mikel Annjuk <anmishael@advancewebsoft.com>, <anmishael@gmail.com>)
+for Riccardo <info@oscommerce.it>
+
+NOTE: Insallaion steps are specific for http://www.anotherdemo.it/ sore because of non clear oscommers with lot of contributions. So line numbers could be different for sandard osCommerce
+
+
+Installation process:
+==================================================================================================
+1. Register in ICECAT system (http://www.icecat.biz/en/menu/register/index.htm)
+   use "subscription level" - "OpenICEcat XML"
+ -------------------------------------------------------------------------------------------------
+ 
+ 
+
+==================================================================================================
+2. Copy "icecat" folder (from this contribution) into your base osCommerce location and 
+   admin/icecat_setup.php into admin folder.
+ --------------------------------------------------------------------------------------------------
+
+
+
+==================================================================================================
+3. Make next changes to following files:
+                                admin/includes/application_top.php
+                                admin/includes/boxes/catalog.php
+                                admin/categories.php
+                                includes/application_top.php
+                                product_info.php
+                                
+                                
+ 
+                                
+ * ********************************** *
+ * admin/includes/application_top.php *
+ * ********************************** *
+
+ add next strings at the end of file before "?>" chars: 
+// ICECAT bof
+	require_once DIR_FS_CATALOG.'icecat/include.php';
+// ICECAT eof
+ 
+ 
+ 
+ 
+ * ******************************** *
+ * admin/includes/boxes/catalog.php *
+ * ******************************** *
+find array:
+
+$contents[] = array('text' =>
+
+(about 24 line in clean osc ms 2.2 rc2) and add next strings after last array item and before ")":
+ 
+ ,'<a href="' . tep_href_link(FILENAME_ICECAT_SETUP, '', 'NONSSL') . '" class="menuBoxContentLink">' . BOX_CATALOG_ICECAT . '</a>'
+
+  NOTE: in standard osc we should use dot "." as first char in hat string, but there we have an array so use comma ","
+
+ * ******************** *
+ * admin/categories.php *
+ * ******************** *
+ 1) after string (~line 13):
+      require('includes/application_top.php');
+    add next two strings:
+// ICECAT {{
+      $objIceCat = new icecat();
+      $iceCat = $objIceCat->checkIfInstalled();
+// ICECAT }}
+  2) find block (~line 272):
+  
+        case 'insert_product':
+        case 'update_product':
+        
+     and next array in that block (~line 290):
+        $sql_data_array = array('products_quantity' => (int)tep_db_prepare_input($HTTP_POST_VARS['products_quantity']),
+                                  'products_model' => tep_db_prepare_input($HTTP_POST_VARS['products_model']),
+                                  'products_price' => tep_db_prepare_input($HTTP_POST_VARS['products_price']),
+                                  'products_date_available' => $products_date_available,
+                                  'products_weight' => (float)tep_db_prepare_input($HTTP_POST_VARS['products_weight']),
+                                  'products_status' => tep_db_prepare_input($HTTP_POST_VARS['products_status']),
+                                  'products_tax_class_id' => tep_db_prepare_input($HTTP_POST_VARS['products_tax_class_id']),
+                                  'products_shopwindow'=>tep_db_prepare_input($_REQUEST['products_shopwindow']),
+                                  'manufacturers_id' => (int)tep_db_prepare_input($HTTP_POST_VARS['manufacturers_id']),
+                                  'products_image'=>tep_db_prepare_input($HTTP_POST_VARS['products_image'])
+					);
+      
+      add following lines after array:
+// ICECAT {{
+      if($iceCat) $sql_data_array['vpn'] = tep_db_prepare_input($HTTP_POST_VARS['vpn']);
+// ICECAT }}
+      
+  3) find string (~line 406):
+        } elseif ($HTTP_POST_VARS['copy_as'] == 'duplicate') {
+     change next line sql query from:
+     
+     $product_query = tep_db_query("select products_quantity, products_model, products_image, products_price, products_date_available, products_weight, products_tax_class_id, manufacturers_id from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'");
+     
+     to:
+     
+    $product_query = tep_db_query("select ".($iceCat?'vpn,':'')." products_quantity, products_model, products_image, products_price, products_date_available, products_weight, products_tax_class_id, manufacturers_id from " . TABLE_PRODUCTS . " where products_id = '" . (int)$products_id . "'");
+  
+  4) find closing head tag "</head>" (~line 561) and add next strings before it:
+  
+<?php
+// ICECAT {{
+require_once(DIR_FS_ICECAT . 'admin/header.php');
+// ICECAT }}
+?>
+  
+  5) find next lines (~line 444):
+      if ($action == 'new_product') {
+    $parameters = array('products_name' => '',
+                       'products_description' => '',
+                       'products_url' => '',
+//SEO start
+                       'products_seo_url' => '',
+//SEO stop
+                       'products_id' => '',
+                       'products_quantity' => '',
+                       'products_model' => '',
+                       'products_image' => '',
+                       'products_price' => '',
+                       'products_weight' => '',
+                       'products_date_added' => '',
+                       'products_last_modified' => '',
+                       'products_date_available' => '',
+                       'products_status' => '',
+                           'products_tax_class_id' => '',
+    					'products_shopwindow'=>'0',
+                       'manufacturers_id' => '');
+      
+      add next string after them:
+// ICECAT {{
+      if($iceCat) $parameters['vpn'] = '';
+// ICECAT }}
+      
+    few lines down you'll see strings (~line 470):
+    
+    if (isset($HTTP_GET_VARS['pID']) && ( empty($HTTP_POST_VARS) || $HTTP_GET_VARS['action_att']) ) {
+      $product_query = tep_db_query("select p.products_shopwindow, pd.products_name, pd.products_seo_url, pd.products_description, pd.products_url, p.products_id, p.products_quantity, p.products_model, p.products_image, p.products_price, p.products_weight, p.products_date_added, p.products_last_modified, date_format(p.products_date_available, '%Y-%m-%d') as products_date_available, p.products_status, p.products_tax_class_id, p.manufacturers_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd where p.products_id = '" . (int)$HTTP_GET_VARS['pID'] . "' and p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "'");
+      
+      change query from:
+      $product_query = tep_db_query("select p.products_shopwindow, pd.products_name, pd.products_seo_url, pd.products_description, pd.products_url, p.products_id, p.products_quantity, p.products_model, p.products_image, p.products_price, p.products_weight, p.products_date_added, p.products_last_modified, date_format(p.products_date_available, '%Y-%m-%d') as products_date_available, p.products_status, p.products_tax_class_id, p.manufacturers_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd where p.products_id = '" . (int)$HTTP_GET_VARS['pID'] . "' and p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "'");
+      
+      to:
+      $product_query = tep_db_query("select ".($iceCat?'p.vpn,':'')." p.products_shopwindow, pd.products_name, pd.products_seo_url, pd.products_description, pd.products_url, p.products_id, p.products_quantity, p.products_model, p.products_image, p.products_price, p.products_weight, p.products_date_added, p.products_last_modified, date_format(p.products_date_available, '%Y-%m-%d') as products_date_available, p.products_status, p.products_tax_class_id, p.manufacturers_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd where p.products_id = '" . (int)$HTTP_GET_VARS['pID'] . "' and p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "'");
+   
+  6) no changes but-
+  
+     NOTE: in standard osCommerce you should add "id" atribute to manufacturers select tag:
+  change it from:
+    tep_draw_pull_down_menu('manufacturers_id', $manufacturers_array, $pInfo->manufacturers_id);
+  to:
+    tep_draw_pull_down_menu('manufacturers_id', $manufacturers_array, $pInfo->manufacturers_id, 'id="manufacturers_id"');   
+  
+  7)
+    find strings (~line 688):
+      <tr bgcolor="#ebebff">
+            <td class="main"><?php echo TEXT_PRODUCTS_PRICE_GROSS; ?></td>
+            <td class="main"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' . tep_draw_input_field('products_price_gross', $pInfo->products_price, 'onKeyUp="updateNet()"'); ?></td>
+          </tr>
+      add next strings after them:
+      
+      <?php
+// ICECAT {{
+          if($iceCat) {
+          	?>
+          <tr bgcolor="#ebebff">
+            <td class="main"><?php echo VPN; ?></td>
+            <td class="main" valign="middle"><?php echo tep_draw_separator('pixel_trans.gif', '24', '15') . '&nbsp;' .
+            tep_draw_input_field('vpn', $pInfo->vpn, 'id="vpn"') . ' ' . tep_image_button('button_save.gif', IMAGE_SAVE, 'valign="absmiddle" onclick="var el=document.getElementById(\'vpn\');var mel=document.getElementById(\'manufacturers_id\');doLoadLang(\'pid=' . $pInfo->products_id . '&vpn=\'+encodeURIComponent(el.value)+\'&mID=\'+mel.value,null);"');
+            ?></td>
+          </tr>
+          <?php
+          	for($i=0;$i<sizeof($languages);$i++) {
+          		?><tr bgcolor="#ebebff" valign="top" align="right"><td><?php
+          		echo tep_image(DIR_WS_CATALOG_LANGUAGES . $languages[$i]['directory'] . '/images/' . $languages[$i]['image'], $languages[$i]['name']); ?>&nbsp;
+          	</td>
+          	<td class="prodDescArea"><div id="icecatADesc<?=$languages[$i]['code']?>" class="icecatADesc"></div></td>
+          </tr><?php
+          	}
+          	?>
+<script type="text/javascript">
+var vpnVal = document.getElementById('vpn');
+vpnVal = encodeURIComponent(vpnVal.value);
+var mVal = document.getElementById('manufacturers_id');
+mVal = mVal.value;
+doLoadLang('pid=<?=$pInfo->products_id?>&vpn='+vpnVal+'&mID='+mVal,null);
+</script>
+          <?php
+          }
+// ICECAT }}
+          ?>
+          
+  8)
+    find string (~line 840):
+  } elseif ($action == 'new_product_preview') {
+  add change first query after it (~line 849) from:
+  $product_query = tep_db_query("select p.products_shopwindow,p.products_id, pd.language_id, pd.products_name, pd.products_seo_url, pd.products_description, pd.products_url, p.products_quantity, p.products_model, p.products_image, p.products_price, p.products_weight, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status, p.manufacturers_id  from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd where p.products_id = pd.products_id and p.products_id = '" . (int)$HTTP_GET_VARS['pID'] . "'");
+  
+  to:
+  $product_query = tep_db_query("select ".($iceCat?'p.vpn,':'')." p.products_shopwindow,p.products_id, pd.language_id, pd.products_name, pd.products_seo_url, pd.products_description, pd.products_url, p.products_quantity, p.products_model, p.products_image, p.products_price, p.products_weight, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status, p.manufacturers_id  from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd where p.products_id = pd.products_id and p.products_id = '" . (int)$HTTP_GET_VARS['pID'] . "'");
+
+  9) find and change strings (~line 1109) from:
+      if (isset($HTTP_GET_VARS['search'])) {
+//SEO      $products_query = tep_db_query("select p.products_id, pd.products_name, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status, p2c.categories_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and pd.products_name like '%" . tep_db_input($search) . "%' order by pd.products_name");
+      $products_query = tep_db_query("select p.products_shopwindow, p.products_id, pd.products_name, pd.products_seo_url, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status, p2c.categories_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and (pd.products_name like '%" . tep_db_input($search) . "%' or p.products_model like '%" . tep_db_input($search) . "%') order by pd.products_name");
+    } else {
+//SEO      $products_query = tep_db_query("select p.products_id, pd.products_name, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and p2c.categories_id = '" . (int)$current_category_id . "' order by pd.products_name");
+      $products_query = tep_db_query("select p.products_shopwindow, p.products_id, pd.products_name, pd.products_seo_url, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and p2c.categories_id = '" . (int)$current_category_id . "' order by pd.products_name");
+    }
+    to:
+        if (isset($HTTP_GET_VARS['search'])) {
+//SEO      $products_query = tep_db_query("select p.products_id, pd.products_name, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status, p2c.categories_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and pd.products_name like '%" . tep_db_input($search) . "%' order by pd.products_name");
+      $products_query = tep_db_query("select ".($iceCat?'p.vpn,':'')." p.products_shopwindow, p.products_id, pd.products_name, pd.products_seo_url, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status, p2c.categories_id from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and (pd.products_name like '%" . tep_db_input($search) . "%' or p.products_model like '%" . tep_db_input($search) . "%') order by pd.products_name");
+    } else {
+//SEO      $products_query = tep_db_query("select p.products_id, pd.products_name, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and p2c.categories_id = '" . (int)$current_category_id . "' order by pd.products_name");
+      $products_query = tep_db_query("select ".($iceCat?'p.vpn,':'')." p.products_shopwindow, p.products_id, pd.products_name, pd.products_seo_url, p.products_quantity, p.products_image, p.products_price, p.products_date_added, p.products_last_modified, p.products_date_available, p.products_status from " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd, " . TABLE_PRODUCTS_TO_CATEGORIES . " p2c where p.products_id = pd.products_id and pd.language_id = '" . (int)$languages_id . "' and p.products_id = p2c.products_id and p2c.categories_id = '" . (int)$current_category_id . "' order by pd.products_name");
+    }
+  
+  10) 
+    find strings (~line 1336):
+    //PWS bof
+//            $contents[] = array('text' => '<br>' . TEXT_PRODUCTS_PRICE_INFO . ' ' . $currencies->format($pInfo->products_price) . '<br>' . TEXT_PRODUCTS_QUANTITY_INFO . ' ' . $pInfo->products_quantity);
+            $contents[] = array('text' => '<br>' . TEXT_PRODUCTS_PRICE_INFO . ' ' . $pws_prices->getHtmlPriceDiscounts($pInfo->products_id). '<br>' . TEXT_PRODUCTS_QUANTITY_INFO . ' ' . $pInfo->products_quantity);
+//PWS eof
+    add after them:
+// ICECAT {{
+  if($iceCat) $contents[] = array('text' => '<br/><b>' . VPN. '</b><br/>' . $pInfo->vpn . '<br />');
+// ICECAT }}
+
+ * **************************** *
+ * includes/application_top.php *
+ * **************************** *
+ --------------------------------------------------------------------------------------------------
+ add next strings at the end of file before "?>" chars:
+// ICECAT: ADD
+	require_once(DIR_FS_CATALOG . 'icecat/include.php');
+//ICECAT: EOADD
+---------------------------------------------------------------------------------------------------
+
+
+
+
+ * **************** *
+ * product_info.php *
+ * **************** *
+ -------------------------------------------------------------------------------------------------- 
+   1)
+     add next strings before closing header tag (before </head> ):
+     <?php
+// ICECAT {{
+        require_once(DIR_WS_ICECAT . 'header.php');
+// ICECAT }}
+     ?>
+     
+     and change body tag,-place next string before the end of tag (before ">"):
+      onload="doLoad('pid=<?=(int)$HTTP_GET_VARS['products_id']?>&languages_id=<?=$languages_id?>',null,'productDesc');"
+     so if you have body like <body marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+     it should look:
+     <body marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" onload="doLoad('pid=<?=(int)$HTTP_GET_VARS['products_id']?>&languages_id=<?=$languages_id?>',null,'productDesc');">
+ --------------------------------------------------------------------------------------------------
+   2)
+     find string <p><?php echo stripslashes($product_info['products_description']); ?></p>
+     and change it to next strings:
+     <?php
+     $objIceCat = new icecat();
+    if($objIceCat->checkIfInstalled()) {
+    ?>
+      <div id="productDesc">
+        <p><?php echo stripslashes($product_info['products_description']); ?></p>
+       </div>
+    <?php
+    } else {
+    ?>
+    	<p><?php echo stripslashes($product_info['products_description']); ?></p>
+    <?php	
+    }
+    ?>
+ --------------------------------------------------------------------------------------------------
+ 
+ 
+ ==================================================================================================
+ 4. go to admin part catalog->ICEcat and click on "install" button
+ 
+ 
+ now you can use ICEcat

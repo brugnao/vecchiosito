@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Order History</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start orderhistorybox //-->
+<span tal:comment="La skin box_simple_header richiede la definizione della variabile 'title'"
+      tal:define="title box_heading"
+      metal:use-macro="boxes.htm/box_simple_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <span tal:omit-tag="" metal:fill-slot="box_contents">
+    	<table border="0" width="100%" cellspacing="0" cellpadding="1">
+    	 <tr tal:repeat="order orders">
+    	  <td class="infoBoxContents">
+    	   <a tal:attributes="href order/products_link" tal:content="structure order/products_name">Blade Runner - Director's Cut</a>
+    	  </td>
+    	  <td class="infoBoxContents" align="right" valign="top">
+    	   <a tal:attributes="href order/link">
+    	    <img tal:attributes="src cart_image/src;alt cart_image/alt;title cart_image/title" src="images/icons/cart.gif" border="0" alt="Nel carrello" title=" Nel carrello "/>
+    	   </a>
+    	  </td>
+    	 </tr>
+    	</table>
+	  </span>
+</span>
+<!-- end orderhistorybox //-->
+</body>
+</html>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/oscommerce_pws/!svn/ver/5387/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions
+END
+compatibility.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/compatibility.php
+END
+general.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/5280/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/general.php
+END
+validations.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/validations.php
+END
+easypopulate_functions.php
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/easypopulate_functions.php
+END
+database.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/5387/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/database.php
+END
+html_output.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/5258/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/html_output.php
+END
+coupons.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/oscommerce_pws/!svn/ver/4126/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/coupons.php
+END
+languages.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/languages.php
+END
+sessions.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/sessions.php
+END
+thumbnails.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/oscommerce_pws/!svn/ver/3349/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/thumbnails.php
+END
+html_graphs.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/oscommerce_pws/!svn/ver/5039/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/html_graphs.php
+END
+localization.php
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/admin/includes/functions/localization.php
+END

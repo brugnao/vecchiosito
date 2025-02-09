@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Product Filters</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" tal:condition="show_manufacturer_description">
+	<tr>
+		<td class="pageHeading" tal:content="structure heading_title">Titolo o Nome Produttore</td>
+	</tr>	
+	
+	<tr >
+		<td class="main" width="100%" >
+			<img align="left" tal:attributes="src image/src;width image/width;height image/height;title image/title;alt image/title"/><div tal:condition="manufacturer_description" tal:content="structure manufacturer_description" >Descrizione html Produttore</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="main" tal:content="structure manufacturer_url"> Url Produttore </td>
+	</tr>
+
+</table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td class="pageHeading" tal:content="structure heading_title">Titolo</td>
+		<td align="center" class="main" tal:condition="show_form">
+			<form tal:attributes="action form/action;name form/name;id form/id;method form/method">
+				<input type="hidden" tal:condition="php:isset(params['manufacturers_id'])" name="manufacturers_id" tal:attributes="value php:params['manufacturers_id']"/>
+				<input type="hidden" tal:condition="php:!isset(params['manufacturers_id'])" name="cPath" tal:attributes="value cPath"/>
+				<input type="hidden" name="sort" tal:attributes="value php:params['sort']"/>
+				<label for="filter_id" tal:content="structure manufacturers_menu/label">Mostra </label>
+				<select name="filter_id" id="filter_id" onchange="this.form.submit()">
+					<span tal:omit-tag="" tal:repeat="option manufacturers_menu/options">
+						<option tal:condition="php:params['filter_id'] EQ option['id']" selected="true" tal:attributes="value option/id" tal:content="structure option/text"/>
+						<option tal:condition="php:params['filter_id'] NE option['id']" tal:attributes="value option/id" tal:content="structure option/text"/>
+					</span>
+				</select>
+        	</form>
+        </td>
+		<td align="right" tal:condition="php:is_array(image)"><img tal:attributes="src image/src;width image/width;height image/height;title image/title;alt image/title"/></td>
+	</tr>
+</table>
+</body>
+</html>

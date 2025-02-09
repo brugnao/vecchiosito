@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Shopping Cart Box</title>
+<link href="../../../../stylesheet.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- start cartbox //-->
+<span tal:comment="La skin box_simple_header richiede la definizione della variabile 'title'"
+      tal:define="title box_heading"
+      metal:use-macro="boxes.htm/box_simple_header"/>
+<span tal:comment=" Questa macro crea il contenitore per il contenuto del box e necessita
+					di una definizione fill-slot che assegni il contenuto da inserire in 'box_contents'"
+	  metal:use-macro="boxes.htm/box_body">
+	  <center metal:fill-slot="box_contents">
+		  <span tal:omit-tag="" tal:condition="no_products" tal:content="structure no_products_text">0 prodotti ...&egrave; vuoto</span>
+		  <span tal:condition="not:no_products">
+		  	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		    	<tr tal:repeat="product products">
+		    	 	<span tal:omit-tag="" tal:condition="product/new_item">
+			    		<td align="right" valign="top" class="infoBoxContents"><span class="newItemInCart"><span tal:omit-tag="" tal:content="structure product/quantity">1</span>&nbsp;x&nbsp;</span></td>
+			    		<td valign="top" class="infoBoxContents"><a tal:attributes="href product/href"><span class="newItemInCart" tal:content="structure product/name">Blade Runner - Director's Cut</span></a></td>
+		    	 	</span>
+		    	 	<span tal:omit-tag="" tal:condition="not:product/new_item">
+			    		<td align="right" valign="top" class="infoBoxContents"><span class="infoBoxContents"><span tal:omit-tag="" tal:content="structure product/quantity">1</span>&nbsp;x&nbsp;</span></td>
+			    		<td valign="top" class="infoBoxContents"><a tal:attributes="href product/href"><span class="infoBoxContents" tal:content="structure product/name">Blade Runner - Director's Cut</span></a></td>
+		    	 	</span>
+		    	</tr>
+		    </table>
+		  </span>
+		  <div tal:condition="not:no_products"><img src="images/pixel_black.gif" border="0" alt="" width="100%" height="1"/></div>
+		  <div tal:condition="not:no_products" tal:content="structure cart_total">395.99EUR</div>
+	  </center>
+</span>
+<!-- end cartbox //-->
+</body>
+</html>

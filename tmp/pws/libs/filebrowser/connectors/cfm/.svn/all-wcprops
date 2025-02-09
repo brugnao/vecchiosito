@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/filebrowser/connectors/cfm
+END
+config.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/filebrowser/connectors/cfm/config.cfm
+END
+connector.cfm
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/oscommerce_pws/!svn/ver/1300/tags/oscommerce_pws_ioncube_1298/httpdocs/pws/libs/filebrowser/connectors/cfm/connector.cfm
+END
